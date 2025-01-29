@@ -9,6 +9,7 @@ from telegram import Update
 from telegram.ext import (
     Application,
     CommandHandler,
+    CallbackQueryHandler,  # добавьте эту строку
     ContextTypes,
     JobQueue,
 )
@@ -105,6 +106,10 @@ class VolleyballBot:
             application.add_handler(CommandHandler("remove_player", self.admin_handler.remove_player))
             application.add_handler(CommandHandler("toggle_bot", self.admin_handler.toggle_bot))
             application.add_handler(CommandHandler("stats", self.admin_handler.show_stats))
+            
+            # Добавляем обработчик кнопок
+            application.add_handler(CallbackQueryHandler(self.user_handler.button_handler))
+
 
             # Настраиваем ежедневную публикацию списков
             job_queue = application.job_queue

@@ -9,6 +9,8 @@ from .common import CommandHandler
 from database.models import PlayerStatus
 from utils.formatting import format_players_list
 
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
 class UserCommandHandler(CommandHandler):
     """Обработчик пользовательских команд"""
 
@@ -185,6 +187,59 @@ class UserCommandHandler(CommandHandler):
             )
             
             await update.message.reply_text(message)
+
+    async def button_handler(self, update: Update, 
+                           context: ContextTypes.DEFAULT_TYPE) -> None:
+        """Обработчик нажатий на кнопки"""
+        query = update.callback_query
+        await query.answer()
+        
+        if query.data.startswith('join_menu_'):
+            # Показываем меню выбора типа записи
+            time = query.data.split('_')[2]
+            await query.message.edit_reply_markup(
+                reply_markup=create_join_menu(time)
+            )
+        
+        elif query.data.startswith('join_self_'):
+            # Запись одного человека
+            time = query.data.split('_')[2]
+            # Используем существующую логику join_session
+            context.args = [time]
+            await self.join_session(update, context)
+        
+        elif query.data.startswith('join_multiple_'):
+            # Запрашиваем список игроков
+            time = query.data.split('_')[2]
+            await query.message.reply_text(
+                "Пожалуйста, напишите имена игроков через запятую"
+            )
+            # Сохраняем время в контексте для следующего сообщения
+            context.user_data['pending_multiple_join'] = time
+        
+        elif query.data == 'cancel_registration':
+            # Показываем список сессий для отмены
+            sessions = self.db.get_sessions_for_date(datetime.now().date())
+            if not sessions:
+                await query.message.reply_text("Нет активных сессий")
+                return
+            
+            keyboard = []
+            for session in sessions:
+                time_str = session.time_start.strftime(
+                    self.config.FORMAT_SETTINGS['time_format']
+                )
+                keyboard.append([
+                    InlineKeyboardButton(
+                        f"Отменить запись на {time_str}",
+                        callback_data=f"cancel_{time_str}"
+                    )
+                ])
+            
+            await query.message.reply_text(
+                "Выберите сессию для отмены записи:",
+                reply_markup=InlineKeyboardMarkup(keyboard)
+            )            
         
         # Логируем команду
         self.log_command_usage(update, 'sessions')

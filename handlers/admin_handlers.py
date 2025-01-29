@@ -8,15 +8,17 @@ from typing import List
 from .common import CommandHandler
 from database.models import PlayerStatus
 from utils.validators import parse_time_range
+from utils.formatting import format_players_list, create_session_buttons
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 class AdminCommandHandler(CommandHandler):
     """Обработчик административных команд"""
-
     async def create_session(self, update: Update, 
                            context: ContextTypes.DEFAULT_TYPE) -> None:
         """
         Создание новой сессии
-        Пример: /create_session 14:00-16:00 6
+        Без параметров: создает две стандартные сессии (14-16 и 16-18)
+        С параметрами: создает сессии по указанным временам
         """
         if not update.message:
             return
@@ -24,64 +26,75 @@ class AdminCommandHandler(CommandHandler):
         if not await self.check_admin(update, context):
             return
 
-        args = context.args
-        if len(args) < 2:
-            await update.message.reply_text(
-                "Usage: /create_session TIME_RANGE MAX_PLAYERS\n"
-                "Example: /create_session 14:00-16:00 6"
-            )
-            return
-
-        time_range = args[0]
-        try:
-            max_players = int(args[1])
-        except ValueError:
-            await update.message.reply_text("Invalid number of players")
-            return
-
-        times = parse_time_range(time_range)
-        if not times:
-            await update.message.reply_text("Invalid time format")
-            return
-
-        start_time, end_time = times
+        sessions_to_create = []
         tomorrow = datetime.now().date() + timedelta(days=1)
-        
-        # Создаем сессию
-        session = self.db.create_session(
-            date=tomorrow,
-            time_start=start_time,
-            time_end=end_time,
-            max_players=max_players
-        )
 
-        # Отправляем сообщение со списком
-        message = self.messages.SESSION_TEMPLATE.format(
-            date=tomorrow.strftime(self.config.FORMAT_SETTINGS['date_format']),
-            session_num='1',  # Можно добавить логику нумерации сессий
-            start_time=start_time.strftime(
-                self.config.FORMAT_SETTINGS['time_format']
-            ),
-            end_time=end_time.strftime(
-                self.config.FORMAT_SETTINGS['time_format']
-            ),
-            max_players=max_players,
-            players_list="",
-            reserve_list=""
-        )
-        
-        sent_message = await update.message.reply_text(message)
-        
-        # Сохраняем ID сообщения
-        self.db.update_session_message(
-            session.id, 
-            sent_message.message_id,
-            update.effective_chat.id
-        )
+        # Если аргументов нет, создаем стандартные сессии
+        if not context.args:
+            sessions_to_create = [
+                ("14:00-16:00", 6),  # Первая сессия: 14-16, 6 игроков
+                ("16:00-18:00", 8)   # Вторая сессия: 16-18, 8 игроков
+            ]
+        else:
+            # Парсим аргументы для создания указанных сессий
+            time_ranges = context.args[0].split(',')
+            for time_range in time_ranges:
+                time_range = time_range.strip()
+                # Определяем количество игроков по времени начала
+                max_players = 8 if time_range.startswith('16:') else 6
+                sessions_to_create.append((time_range, max_players))
+
+        # Создаем каждую сессию
+        for time_range, max_players in sessions_to_create:
+            times = parse_time_range(time_range)
+            if not times:
+                await update.message.reply_text(f"Invalid time format: {time_range}")
+                continue
+
+            start_time, end_time = times
+            
+            # Создаем сессию
+            session = self.db.create_session(
+                date=tomorrow,
+                time_start=start_time,
+                time_end=end_time,
+                max_players=max_players
+            )
+
+            # Создаем сообщение со списком
+            message = self.messages.SESSION_TEMPLATE.format(
+                date=tomorrow.strftime(self.config.FORMAT_SETTINGS['date_format']),
+                session_num='1',  # Можно добавить логику нумерации сессий
+                start_time=start_time.strftime(
+                    self.config.FORMAT_SETTINGS['time_format']
+                ),
+                end_time=end_time.strftime(
+                    self.config.FORMAT_SETTINGS['time_format']
+                ),
+                max_players=max_players,
+                players_list=format_players_list([], max_players),  # Пустой список с нужным количеством мест
+                reserve_list=""
+            )
+            
+    # Отправляем отдельным сообщением (не reply) с кнопками
+            sent_message = await context.bot.send_message(
+                chat_id=update.effective_chat.id,
+                text=message,
+                reply_markup=create_session_buttons([
+                    start_time.strftime(self.config.FORMAT_SETTINGS['time_format'])
+                ])
+            )
+            
+            # Сохраняем ID сообщения
+            self.db.update_session_message(
+                session.id, 
+                sent_message.message_id,
+                update.effective_chat.id
+            )
 
         # Логируем команду
         self.log_command_usage(update, 'create_session')
-
+        
     async def add_players(self, update: Update, 
                          context: ContextTypes.DEFAULT_TYPE) -> None:
         """

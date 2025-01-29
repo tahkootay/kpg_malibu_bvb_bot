@@ -8,3 +8,71 @@ AttributeError: 'NoneType' object has no attribute 'run_daily'
 2025-01-29 15:13:03,005 - kpg_malibu_bvb - INFO - Bot started
 2025-01-29 15:19:20,705 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: 43704386
 2025-01-29 15:25:53,202 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 16:27:49,849 - kpg_malibu_bvb - ERROR - Error starting bot: 'AdminCommandHandler' object has no attribute 'create_session'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 104, in run
+    application.add_handler(CommandHandler("create_session", self.admin_handler.create_session))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AdminCommandHandler' object has no attribute 'create_session'
+2025-01-29 16:28:25,064 - kpg_malibu_bvb - ERROR - Error starting bot: 'AdminCommandHandler' object has no attribute 'create_session'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 104, in run
+    application.add_handler(CommandHandler("create_session", self.admin_handler.create_session))
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'AdminCommandHandler' object has no attribute 'create_session'
+2025-01-29 16:33:47,280 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 16:33:50,489 - kpg_malibu_bvb - ERROR - Error starting bot: The token `7983633836:AAHkEnFi-wq3fcb3mEcoVLoFX31DxpgbwlQ` was rejected by the server.
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 768, in initialize
+    await self.get_me()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1873, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 903, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 377, in _request_wrapper
+    raise InvalidToken(message)
+telegram.error.InvalidToken: Unauthorized
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 128, in run
+    application.run_polling()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 836, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1036, in __run
+    raise exc
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1025, in __run
+    loop.run_until_complete(self.initialize())
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 495, in initialize
+    await self.bot.initialize()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 293, in initialize
+    await super().initialize()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 770, in initialize
+    raise InvalidToken(f"The token `{self._token}` was rejected by the server.") from exc
+telegram.error.InvalidToken: The token `7983633836:AAHkEnFi-wq3fcb3mEcoVLoFX31DxpgbwlQ` was rejected by the server.
+2025-01-29 16:42:33,708 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 16:44:46,332 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: 43704386
+2025-01-29 16:45:21,385 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: -1001931349972
+2025-01-29 16:45:28,756 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
