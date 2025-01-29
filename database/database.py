@@ -236,7 +236,7 @@ class Database:
                 results.append((player, registration))
             
             return results
-            def get_session_reserve(self, session_id: int) -> List[Tuple[Player, Registration]]:
+    def get_session_reserve(self, session_id: int) -> List[Tuple[Player, Registration]]:
         """Получение списка резерва для сессии"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()

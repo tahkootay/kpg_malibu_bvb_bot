@@ -1,4 +1,4 @@
-pip install -r requirements.txt# main.py
+# main.py
 
 import os
 import logging

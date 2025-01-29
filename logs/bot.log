@@ -1,0 +1,6 @@
+2025-01-29 15:06:56,245 - kpg_malibu_bvb - ERROR - Error starting bot: 'NoneType' object has no attribute 'run_daily'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 113, in run
+    job_queue.run_daily(
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'run_daily'
