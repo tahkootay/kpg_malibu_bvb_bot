@@ -26,3 +26,6 @@ database/*.db
 # Logs
 *.log
 logs/
+
+# mac
+.DS_Store
