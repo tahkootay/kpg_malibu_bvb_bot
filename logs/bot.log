@@ -76,3 +76,188 @@ telegram.error.InvalidToken: The token `7983633836:AAHkEnFi-wq3fcb3mEcoVLoFX31Dx
 2025-01-29 16:44:46,332 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: 43704386
 2025-01-29 16:45:21,385 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: -1001931349972
 2025-01-29 16:45:28,756 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 21:10:00,702 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 21:10:36,985 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 21:11:01,033 - kpg_malibu_bvb - ERROR - Error updating message: format_players_list() missing 1 required positional argument: 'max_players'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 76, in update_session_message
+    players_list=format_players_list(players),
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: format_players_list() missing 1 required positional argument: 'max_players'
+2025-01-29 21:11:01,036 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 21:24:24,365 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 22:42:04,770 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 22:51:39,631 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 22:51:48,924 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 70, in create_session
+    session_message = self.messages.SESSION_TEMPLATE.format(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'last_update'
+2025-01-29 22:54:56,494 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 22:55:07,199 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 22:55:42,105 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:00:28,779 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:08:24,495 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 23:08:41,772 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:09:08,959 - kpg_malibu_bvb - ERROR - Error in update_session_message: name 'format_reserve_list' is not defined
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 80, in update_session_message
+    reserve_list=format_reserve_list(reserve)
+                 ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_reserve_list' is not defined
+2025-01-29 23:09:08,962 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:09:27,361 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 115, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'sessions'
+2025-01-29 23:09:36,215 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 115, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'sessions'
+2025-01-29 23:09:57,460 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 115, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'sessions'
+2025-01-29 23:20:31,500 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 23:20:51,610 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:21:12,483 - kpg_malibu_bvb - ERROR - Error in update_session_message: name 'format_reserve_list' is not defined
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 80, in update_session_message
+    reserve_list=format_reserve_list(reserve)
+                 ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_reserve_list' is not defined
+2025-01-29 23:21:12,486 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:21:25,293 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 115, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'sessions'
+2025-01-29 23:25:22,114 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 23:25:30,907 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:25:38,789 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:29:29,252 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 23:29:39,330 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 76, in create_session
+    {format_reserve_list([])}\n\n"""
+     ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_reserve_list' is not defined
+2025-01-29 23:29:52,968 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 76, in create_session
+    {format_reserve_list([])}\n\n"""
+     ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_reserve_list' is not defined
+2025-01-29 23:30:02,115 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:30:18,929 - kpg_malibu_bvb - INFO - Command: stats | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:30:24,155 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 76, in create_session
+    {format_reserve_list([])}\n\n"""
+     ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_reserve_list' is not defined
+2025-01-29 23:30:36,080 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 76, in create_session
+    {format_reserve_list([])}\n\n"""
+     ^^^^^^^^^^^^^^^^^^^
+NameError: name 'format_reserve_list' is not defined
+2025-01-29 23:31:48,751 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 23:31:53,903 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:32:06,783 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:35:16,262 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 23:35:19,113 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:35:19,917 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:35:20,331 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 81, in button_handler
+    await query.answer()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_callbackquery.py", line 187, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 900, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3767, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2025-01-29 23:35:21,374 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:35:29,362 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:35:43,462 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-29 23:35:57,862 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972

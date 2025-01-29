@@ -1,34 +1,31 @@
 # config/messages.py
 
 class Messages:
-    """
-    Класс с шаблонами всех сообщений бота.
-    Вынесен в отдельный файл для удобства редактирования и локализации.
-    """
-    
-    # Шаблон списка игроков
+    # Updated template with HTML support
     SESSION_TEMPLATE = """
-Date: {date}
+<b>📅 Date:</b> {date}
 
-⏰ Session {session_num}: {start_time} – {end_time}
-👥 Max Players: {max_players}
-Players:  
+<b>⏰ Session {session_num}:</b> <i>{start_time} – {end_time}</i>
+👥 Max players: {max_players}
+<b>Players:</b>  
 {players_list}
 
-Reserve:
-{reserve_list}
+<b>Reserve:</b> {reserve_list}
 """
     
     # Сообщения об ошибках
     ERRORS = {
-        'session_full': "Session is full. You've been added to reserve list.",
+        'session_full': "Session is full. You've been added to the reserve list.",
         'already_registered': "You are already registered for this session.",
         'not_registered': "You are not registered for this session.",
         'invalid_session': "Invalid session time.",
         'admin_only': "This command is for administrators only.",
         'invalid_format': "Invalid command format.",
         'bot_disabled': "Bot is currently disabled.",
+        'update_failed': "Failed to update message. Please try again later.",
+        'message_not_found': "Message not found. It might have been deleted.",
     }
+
     
     # Сообщения об успешных действиях
     SUCCESS = {
@@ -37,6 +34,8 @@ Reserve:
         'moved_to_main': "You've been moved from reserve to main list!",
         'session_created': "New session created successfully.",
         'group_added': "Players have been added to the session.",
+        'list_updated': "✅ Lists updated",
+
     }
     
     # Административные сообщения
@@ -46,7 +45,15 @@ Reserve:
         'settings_updated': "Settings have been updated.",
         'player_removed_admin': "Player {} has been removed from the session.",
     }
-
+    
+   # Добавляем сообщения для статусов сессии
+    SESSION_STATUS = {
+        'empty': "👥 No players",
+        'few_players': "⚠️ Need more players",
+        'ready': "✅ Session ready",
+        'full': "🔒 Session full",
+    }
+    
     # Команды бота
     COMMANDS = {
         'help': """Available commands:

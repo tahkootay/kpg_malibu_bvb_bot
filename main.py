@@ -9,7 +9,9 @@ from telegram import Update
 from telegram.ext import (
     Application,
     CommandHandler,
-    CallbackQueryHandler,  # добавьте эту строку
+    CallbackQueryHandler,
+    MessageHandler,
+    filters,
     ContextTypes,
     JobQueue,
 )
@@ -20,111 +22,87 @@ from handlers.user_handlers import UserCommandHandler
 from handlers.admin_handlers import AdminCommandHandler
 from utils.logger import setup_logger
 
-# Загружаем переменные окружения из .env файла
+# Load environment variables
 load_dotenv()
 
-# Настройка логирования
+# Configure logging
 logger = setup_logger(
     'kpg_malibu_bvb',
     'logs/bot.log',
     logging.INFO
 )
 
+async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Log errors caused by updates"""
+    logger.error("Exception while handling an update:", exc_info=context.error)
+    
+    try:
+        if update.message:
+            await update.message.reply_text(
+                "Sorry, an error occurred while processing your request."
+            )
+    except Exception as e:
+        logger.error(f"Error in error handler: {e}", exc_info=True)
+
 class VolleyballBot:
-    """Основной класс бота"""
+    """Main bot class"""
     
     def __init__(self):
-        """Инициализация бота"""
+        """Initialize bot"""
         self.db = Database(f"{BotConfig.DATABASE['path']}{BotConfig.DATABASE['name']}")
         self.user_handler = UserCommandHandler(self.db, logger)
         self.admin_handler = AdminCommandHandler(self.db, logger)
 
     async def create_daily_sessions(self, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Создание ежедневных сессий"""
+        """Create daily sessions"""
         try:
             chat_id = context.job.data['chat_id']
             logger.info(f"Creating daily sessions for chat {chat_id}")
             
-            tomorrow = datetime.now().date() + timedelta(days=1)
+            # Simulate create_session command from system
+            update = Update(0)  # Create dummy Update
+            update.effective_chat = type('obj', (object,), {'id': chat_id})
+            await self.admin_handler.create_session(update, context)
             
-            # Создаем стандартные сессии
-            for start_time, end_time in BotConfig.DEFAULT_SESSIONS:
-                session = self.db.create_session(
-                    date=tomorrow,
-                    time_start=start_time,
-                    time_end=end_time,
-                    max_players=BotConfig.SESSION_SETTINGS['default_max_players']
-                )
-                
-                # Создаем сообщение для сессии
-                message = self.user_handler.messages.SESSION_TEMPLATE.format(
-                    date=tomorrow.strftime(BotConfig.FORMAT_SETTINGS['date_format']),
-                    session_num='1',
-                    start_time=start_time.strftime(
-                        BotConfig.FORMAT_SETTINGS['time_format']
-                    ),
-                    end_time=end_time.strftime(
-                        BotConfig.FORMAT_SETTINGS['time_format']
-                    ),
-                    max_players=BotConfig.SESSION_SETTINGS['default_max_players'],
-                    players_list="",
-                    reserve_list=""
-                )
-                
-                # Отправляем сообщение в чат
-                sent_message = await context.bot.send_message(
-                    chat_id=chat_id,
-                    text=message
-                )
-                
-                # Сохраняем ID сообщения
-                self.db.update_session_message(
-                    session.id,
-                    sent_message.message_id,
-                    chat_id
-                )
-                
             logger.info("Daily sessions created successfully")
         except Exception as e:
             logger.error(f"Error creating daily sessions: {e}", exc_info=True)
 
     def run(self):
-        """Запуск бота"""
+        """Run the bot"""
         try:
-            # Создаем приложение
+            # Create application
             application = Application.builder().token(BotConfig.TOKEN).build()
 
-            # Регистрируем обработчики пользовательских команд
-            application.add_handler(CommandHandler("help", self.user_handler.help_command))
-            application.add_handler(CommandHandler("join", self.user_handler.join_session))
-            application.add_handler(CommandHandler("leave", self.user_handler.leave_session))
-            application.add_handler(CommandHandler("sessions", self.user_handler.show_sessions))
+            # Add error handler
+            application.add_error_handler(error_handler)
 
-            # Регистрируем обработчики административных команд
+            # Register handlers
+            application.add_handler(CommandHandler("help", self.user_handler.help_command))
+            application.add_handler(CommandHandler("sessions", self.user_handler.show_sessions))
             application.add_handler(CommandHandler("create_session", self.admin_handler.create_session))
-            application.add_handler(CommandHandler("add_players", self.admin_handler.add_players))
-            application.add_handler(CommandHandler("remove_player", self.admin_handler.remove_player))
             application.add_handler(CommandHandler("toggle_bot", self.admin_handler.toggle_bot))
             application.add_handler(CommandHandler("stats", self.admin_handler.show_stats))
             
-            # Добавляем обработчик кнопок
+            # Button handlers
             application.add_handler(CallbackQueryHandler(self.user_handler.button_handler))
-
-
-            # Настраиваем ежедневную публикацию списков
-            job_queue = application.job_queue
             
-            # Задача будет выполняться каждый день в указанное время
+            # Message handlers
+            application.add_handler(MessageHandler(
+                filters.TEXT & ~filters.COMMAND, 
+                self.user_handler.handle_message
+            ))
+
+            # Setup daily posts schedule
+            job_queue = application.job_queue
             job_queue.run_daily(
                 self.create_daily_sessions,
                 time=BotConfig.AUTOPOST_TIME,
-                days=(0, 1, 2, 3, 4, 5, 6),  # Все дни недели
-                data={'chat_id': os.getenv('TELEGRAM_CHAT_ID')}  # ID чата из конфигурации
+                days=(0, 1, 2, 3, 4, 5, 6),  # All days of week
+                data={'chat_id': os.getenv('TELEGRAM_CHAT_ID')}
             )
-            
+
             logger.info("Bot started")
-            
-            # Запускаем бота
             application.run_polling()
             
         except Exception as e:

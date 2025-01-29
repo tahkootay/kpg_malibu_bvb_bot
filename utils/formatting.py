@@ -1,66 +1,117 @@
 # utils/formatting.py
 
-from typing import List, Tuple
-from database.models import Player, Registration
+from typing import List, Tuple, Dict
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from database.models import Player, Registration, Session
+
+# utils/formatting.py
+
+from typing import List, Tuple
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from database.models import Player, Registration, Session
 
 def format_players_list(players: List[Tuple[Player, Registration]], max_players: int) -> str:
-    """
-    Форматирование списка игроков с пронумерованными пустыми местами
-    """
-    number_emojis = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣']
-    players_dict = {idx: player.full_name for idx, (player, _) in enumerate(players)}
+    """Format the main players list with numbers"""
+    number_emojis = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
     formatted_list = []
+    
+    players_dict = {idx: player for idx, (player, reg) in enumerate(players)}
     
     for i in range(max_players):
         if i < len(number_emojis):
-            name = players_dict.get(i, '')
-            formatted_list.append(f"{number_emojis[i]} {name}")
+            if player := players_dict.get(i):
+                name = f"<b>{player.full_name}</b>"
+                if player.telegram_id:
+                    name = f'<a href="tg://user?id={player.telegram_id}">{player.full_name}</a>'
+                formatted_list.append(f"{number_emojis[i]} {name}")
+            else:
+                formatted_list.append(f"{number_emojis[i]}")
     
     return '\n'.join(formatted_list)
 
-def format_time_range(start_time: str, end_time: str) -> str:
+def format_reserve_list(players: List[Tuple[Player, Registration]]) -> str:
+    """Format reserve list as comma-separated names"""
+    if not players:
+        return ""
+        
+    names = []
+    for player, _ in players:
+        if player.telegram_id:
+            names.append(f'<a href="tg://user?id={player.telegram_id}">{player.full_name}</a>')
+        else:
+            names.append(player.full_name)
+    
+    return ', '.join(names)
+
+def create_session_buttons(sessions: List[Session]) -> InlineKeyboardMarkup:
     """
-    Форматирование временного диапазона
+    Create keyboard with buttons for all sessions
     
     Args:
-        start_time: время начала в формате HH:MM
-        end_time: время окончания в формате HH:MM
+        sessions: list of available sessions
     
     Returns:
-        str: отформатированный временной диапазон
+        InlineKeyboardMarkup: keyboard with session buttons
     """
-    return f"{start_time} – {end_time}"
-
-def create_session_buttons(session_times: List[str]) -> InlineKeyboardMarkup:
-    """Создание кнопок для записи на сессии"""
     keyboard = []
     
-    # Кнопки записи для каждой сессии
-    for time in session_times:
+    # Join buttons for each session
+    for session in sessions:
+        time_str = session.time_start.strftime('%H:%M')
         keyboard.append([
             InlineKeyboardButton(
-                f"Записаться на {time}",
-                callback_data=f"join_menu_{time}"
+                f"✍️ Join {time_str} session",
+                callback_data=f"join_menu_{session.id}"
             )
         ])
-    
-    # Кнопка отмены записи
-    keyboard.append([
-        InlineKeyboardButton(
-            "Отменить запись",
-            callback_data="cancel_registration"
-        )
+
+    # Cancel registration and refresh buttons
+    keyboard.extend([
+        [
+            InlineKeyboardButton(
+                "❌ Cancel registration",
+                callback_data="cancel_registration"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "🔄 Refresh list",
+                callback_data="refresh_sessions"
+            )
+        ]
     ])
     
     return InlineKeyboardMarkup(keyboard)
 
-def create_join_menu(time: str) -> InlineKeyboardMarkup:
-    """Меню выбора типа записи"""
+def create_join_menu(session_id: int, time_str: str) -> InlineKeyboardMarkup:
+    """
+    Create menu for joining types
+    
+    Args:
+        session_id: ID of the session
+        time_str: session time for display
+    
+    Returns:
+        InlineKeyboardMarkup: keyboard with join options
+    """
     keyboard = [
         [
-            InlineKeyboardButton("Себя", callback_data=f"join_self_{time}"),
-            InlineKeyboardButton("Несколько человек", callback_data=f"join_multiple_{time}")
+            InlineKeyboardButton(
+                "✍️ Register myself", 
+                callback_data=f"join_self_{session_id}"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "👥 Register multiple players", 
+                callback_data=f"join_multiple_{session_id}"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                "« Back",
+                callback_data="back_to_main"
+            )
         ]
     ]
     return InlineKeyboardMarkup(keyboard)
