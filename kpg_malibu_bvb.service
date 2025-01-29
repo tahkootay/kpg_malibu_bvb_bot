@@ -1,0 +1,33 @@
+[Unit]
+Description=KPG Malibu BVB Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=kpg_malibu_bvb
+Group=kpg_malibu_bvb
+WorkingDirectory=/home/kpg_malibu_bvb/kpg_malibu_bvb
+Environment="PYTHONPATH=/home/kpg_malibu_bvb/kpg_malibu_bvb"
+EnvironmentFile=/home/kpg_malibu_bvb/kpg_malibu_bvb/.env
+
+ExecStart=/home/kpg_malibu_bvb/kpg_malibu_bvb/venv/bin/python main.py
+
+Restart=always
+RestartSec=10
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+
+CPUQuota=50%
+MemoryLimit=256M
+
+StandardOutput=append:/var/log/kpg_malibu_bvb/stdout.log
+StandardError=append:/var/log/kpg_malibu_bvb/stderr.log
+
+[Install]
+WantedBy=multi-user.target
