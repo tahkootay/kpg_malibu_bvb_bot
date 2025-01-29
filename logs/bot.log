@@ -4,3 +4,6 @@ Traceback (most recent call last):
     job_queue.run_daily(
     ^^^^^^^^^^^^^^^^^^^
 AttributeError: 'NoneType' object has no attribute 'run_daily'
+2025-01-29 15:10:47,820 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 15:13:03,005 - kpg_malibu_bvb - INFO - Bot started
+2025-01-29 15:19:20,705 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: 43704386

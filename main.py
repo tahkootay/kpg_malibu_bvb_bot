@@ -116,7 +116,7 @@ class VolleyballBot:
                 days=(0, 1, 2, 3, 4, 5, 6),  # Все дни недели
                 data={'chat_id': os.getenv('TELEGRAM_CHAT_ID')}  # ID чата из конфигурации
             )
-
+            
             logger.info("Bot started")
             
             # Запускаем бота
