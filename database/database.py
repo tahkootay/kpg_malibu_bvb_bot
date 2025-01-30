@@ -2,11 +2,14 @@
 
 import sqlite3
 from datetime import datetime, date, time
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict
+import logging
+from dataclasses import asdict
+
 from .models import Player, Session, Registration, PlayerStatus
 
 class Database:
-    """Класс для работы с базой данных."""
+    """Класс для работы с базой данных"""
     
     def __init__(self, db_path: str):
         """
@@ -16,6 +19,7 @@ class Database:
             db_path: путь к файлу базы данных
         """
         self.db_path = db_path
+        self.logger = logging.getLogger('kpg_malibu_bvb')
         self.create_tables()
     
     def create_tables(self) -> None:
@@ -100,16 +104,17 @@ class Database:
                     )
             
             # Создаем нового игрока
+            now = datetime.now()
             cursor.execute(
-                'INSERT INTO players (full_name, telegram_id) VALUES (?, ?)',
-                (full_name, telegram_id)
+                'INSERT INTO players (full_name, telegram_id, created_at) VALUES (?, ?, ?)',
+                (full_name, telegram_id, now.isoformat())
             )
             
             return Player(
                 id=cursor.lastrowid,
                 full_name=full_name,
                 telegram_id=telegram_id,
-                created_at=datetime.now()
+                created_at=now
             )
 
     def get_session(self, session_id: int) -> Optional[Session]:
@@ -124,7 +129,7 @@ class Database:
                 
             return Session(
                 id=session[0],
-                date=datetime.fromisoformat(session[1]),
+                date=datetime.strptime(session[1], '%Y-%m-%d').date(),
                 time_start=datetime.strptime(session[2], '%H:%M').time(),
                 time_end=datetime.strptime(session[3], '%H:%M').time(),
                 max_players=session[4],
@@ -166,7 +171,7 @@ class Database:
                 
             return Session(
                 id=session[0],
-                date=datetime.fromisoformat(session[1]),
+                date=datetime.strptime(session[1], '%Y-%m-%d').date(),
                 time_start=datetime.strptime(session[2], '%H:%M').time(),
                 time_end=datetime.strptime(session[3], '%H:%M').time(),
                 max_players=session[4],
@@ -190,21 +195,51 @@ class Database:
                        status: PlayerStatus) -> Registration:
         """Регистрация игрока на сессию"""
         with sqlite3.connect(self.db_path) as conn:
-            cursor = conn.cursor()
-            now = datetime.now()
-            cursor.execute('''
-                INSERT INTO registrations 
-                (session_id, player_id, status, registration_time)
-                VALUES (?, ?, ?, ?)
-            ''', (session_id, player_id, status.value, now.isoformat()))
-            
-            return Registration(
-                id=cursor.lastrowid,
-                session_id=session_id,
-                player_id=player_id,
-                status=status,
-                registration_time=now
-            )
+            try:
+                cursor = conn.cursor()
+                now = datetime.now()
+
+                # Проверяем существующие регистрации
+                cursor.execute('''
+                    SELECT id, status FROM registrations 
+                    WHERE session_id = ? AND player_id = ?
+                ''', (session_id, player_id))
+                
+                existing = cursor.fetchone()
+                registration_id = None
+                
+                if existing:
+                    # Обновляем статус существующей регистрации
+                    cursor.execute('''
+                        UPDATE registrations 
+                        SET status = ?, registration_time = ?
+                        WHERE id = ?
+                    ''', (status.value, now.isoformat(), existing[0]))
+                    registration_id = existing[0]
+                else:
+                    # Создаем новую регистрацию
+                    cursor.execute('''
+                        INSERT INTO registrations 
+                        (session_id, player_id, status, registration_time)
+                        VALUES (?, ?, ?, ?)
+                    ''', (session_id, player_id, status.value, now.isoformat()))
+                    registration_id = cursor.lastrowid
+
+                # Явный коммит транзакции
+                conn.commit()
+
+                return Registration(
+                    id=registration_id,
+                    session_id=session_id,
+                    player_id=player_id,
+                    status=status,
+                    registration_time=now
+                )
+                
+            except sqlite3.Error as e:
+                self.logger.error(f"Database error in register_player: {e}")
+                conn.rollback()
+                raise
 
     def get_session_players(self, session_id: int) -> List[Tuple[Player, Registration]]:
         """Получение списка игроков для сессии"""
@@ -236,6 +271,7 @@ class Database:
                 results.append((player, registration))
             
             return results
+
     def get_session_reserve(self, session_id: int) -> List[Tuple[Player, Registration]]:
         """Получение списка резерва для сессии"""
         with sqlite3.connect(self.db_path) as conn:
@@ -342,7 +378,7 @@ class Database:
             return cursor.rowcount > 0
 
     def get_sessions_for_date(self, date: date) -> List[Session]:
-        """Получение всех сессий на определенную дату"""
+        """Get all sessions for specific date"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             cursor.execute('''
@@ -355,7 +391,7 @@ class Database:
             for row in cursor.fetchall():
                 session = Session(
                     id=row[0],
-                    date=datetime.fromisoformat(row[1]),
+                    date=datetime.strptime(row[1], '%Y-%m-%d').date(),
                     time_start=datetime.strptime(row[2], '%H:%M').time(),
                     time_end=datetime.strptime(row[3], '%H:%M').time(),
                     max_players=row[4],
@@ -366,6 +402,27 @@ class Database:
             
             return sessions
 
+    def has_sessions_for_date(self, date: date) -> bool:
+        """
+        Check if sessions list already exists for given date
+        
+        Args:
+            date: date to check
+            
+        Returns:
+            bool: True if sessions exist, False otherwise
+        """
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            cursor.execute('''
+                SELECT COUNT(*) 
+                FROM sessions 
+                WHERE date = ?
+            ''', (date.isoformat(),))
+            
+            count = cursor.fetchone()[0]
+            return count > 0
+            
     def set_bot_enabled(self, enabled: bool) -> None:
         """Включение/выключение бота"""
         with sqlite3.connect(self.db_path) as conn:
@@ -385,6 +442,7 @@ class Database:
             ''', ('bot_enabled',))
             
             result = cursor.fetchone()
+            # Если настройки нет, считаем что бот включен
             return result is None or result[0].lower() == 'true'
 
     def get_player_stats(self, player_name: str) -> Optional[dict]:
@@ -407,7 +465,7 @@ class Database:
                 
             return {
                 'total_games': result[0],
-                'last_game': datetime.fromisoformat(result[1]).date() if result[1] else None
+                'last_game': datetime.strptime(result[1], '%Y-%m-%d').date() if result[1] else None
             }
 
     def get_general_stats(self) -> dict:

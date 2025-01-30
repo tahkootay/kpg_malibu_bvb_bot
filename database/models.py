@@ -18,9 +18,11 @@ class Player:
     telegram_id: Optional[int]
     created_at: datetime
 
+# В models.py добавляем методы в класс Session:
+
 @dataclass
 class Session:
-    """Модель данных игровой сессии"""
+    """Model for game session"""
     id: int
     date: datetime
     time_start: time
@@ -28,6 +30,19 @@ class Session:
     max_players: int
     message_id: Optional[int] = None
     chat_id: Optional[int] = None
+
+    def __eq__(self, other):
+        if not isinstance(other, Session):
+            return NotImplemented
+        return (self.date == other.date and 
+                self.time_start == other.time_start)
+
+    def __lt__(self, other):
+        if not isinstance(other, Session):
+            return NotImplemented
+        if self.date != other.date:
+            return self.date < other.date
+        return self.time_start < other.time_start
     
 @dataclass
 class Registration:

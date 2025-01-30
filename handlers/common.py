@@ -4,23 +4,20 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from telegram.error import BadRequest, Forbidden, TelegramError
 from datetime import datetime
-import pytz
+import logging
 
 from database.database import Database
 from config.config import BotConfig
 from config.messages import Messages
-from utils.validators import is_admin, parse_time_range, validate_session_time
-from utils.logger import log_command
-from utils.formatting import (
-    format_players_list,
-    format_reserve_list,
-    create_session_buttons
-)
+from database.models import PlayerStatus
+from utils.validators import is_admin
+from utils.formatting import format_players_list, format_reserve_list, create_session_buttons
 
 class CommandHandler:
     """Base class for handling bot commands"""
     
     def __init__(self, database: Database, logger):
+        """Initialize base handler"""
         self.db = database
         self.config = BotConfig
         self.messages = Messages
@@ -37,108 +34,104 @@ class CommandHandler:
     def log_command_usage(self, update: Update, command: str) -> None:
         """Log command usage"""
         if update.effective_user and update.effective_chat:
-            log_command(
-                self.logger,
-                command,
-                update.effective_user.id,
-                update.effective_chat.id
+            self.logger.info(
+                f"Command: {command} | "
+                f"User: {update.effective_user.id} | "
+                f"Chat: {update.effective_chat.id}"
             )
 
-    async def update_session_message(self, context: ContextTypes.DEFAULT_TYPE, 
-                                   session_id: int) -> None:
+    async def update_session_message(self, context: ContextTypes.DEFAULT_TYPE, session_id: int) -> None:
         """
-        Update message with player list
-        
-        Args:
-            context: bot context
-            session_id: session ID
+        Update the sessions list message
         """
         try:
+            # Первая проверка - валидность контекста
+            if not context or not context.bot:
+                self.logger.error("Invalid context or bot instance")
+                return
+
+            # Get current session
             session = self.db.get_session(session_id)
+            self.logger.info(f"Updating session {session_id}, message_id: {session.message_id}, chat_id: {session.chat_id}")
+            
             if not session or not session.message_id or not session.chat_id:
                 self.logger.warning(f"Session {session_id} not found or missing message info")
                 return
 
-            players = self.db.get_session_players(session_id)
-            reserve = self.db.get_session_reserve(session_id)
-            
-            # Define session number based on start time
+            # Get all sessions for the same date
             all_sessions = self.db.get_sessions_for_date(session.date)
-            session_num = next(
-                (i + 1 for i, s in enumerate(sorted(all_sessions, key=lambda x: x.time_start))
-                 if s.id == session_id),
-                1
-            )
-            
-            message = self.messages.SESSION_TEMPLATE.format(
-                date=session.date.strftime(self.config.FORMAT_SETTINGS['date_format']),
-                session_num=session_num,
-                start_time=session.time_start.strftime(
-                    self.config.FORMAT_SETTINGS['time_format']
-                ),
-                end_time=session.time_end.strftime(
-                    self.config.FORMAT_SETTINGS['time_format']
-                ),
-                max_players=session.max_players,
-                players_list=format_players_list(players, session.max_players),
-                reserve_list=format_reserve_list(reserve)
-            )
+            if not all_sessions:
+                self.logger.error("No sessions found for update")
+                return
 
+            self.logger.info(f"Found {len(all_sessions)} sessions for date {session.date}")
+
+            # Sort sessions by start time
+            all_sessions.sort(key=lambda x: x.time_start)
+
+            # Format the full list message
+            full_message = f"<b>📅 Date:</b> {session.date.strftime(self.config.FORMAT_SETTINGS['date_format'])}\n\n"
+
+            for i, curr_session in enumerate(all_sessions, 1):
+                # Get players and reserve for current session
+                curr_players = self.db.get_session_players(curr_session.id)
+                curr_reserve = self.db.get_session_reserve(curr_session.id)
+                
+                self.logger.info(f"Session {curr_session.id}: {len(curr_players)} players, {len(curr_reserve)} in reserve")
+
+                session_text = f"""<b>⏰ Session {i}:</b> <i>{curr_session.time_start.strftime(self.config.FORMAT_SETTINGS['time_format'])} – {curr_session.time_end.strftime(self.config.FORMAT_SETTINGS['time_format'])}</i>
+👥 Max players: {curr_session.max_players}
+<b>Players:</b>  
+{format_players_list(curr_players, curr_session.max_players)}
+
+<b>Reserve:</b>
+{format_reserve_list(curr_reserve)}
+
+"""
+                full_message += session_text
+
+            # Вторая проверка - валидность сообщения
+            if not full_message or not full_message.strip():
+                self.logger.error("Empty message content")
+                return
+
+            # Update the message with all sessions
             try:
                 buttons = create_session_buttons(all_sessions)
+                self.logger.info(f"Updating message {session.message_id} in chat {session.chat_id}")
+                
+                # Добавляем проверку валидности HTML перед отправкой
+                if not all(tag in full_message for tag in ['</b>', '</i>']):
+                    self.logger.error("Invalid HTML formatting in message")
+                    self.logger.debug(f"Message content: {full_message}")
+                    return
+                    
                 await context.bot.edit_message_text(
                     chat_id=session.chat_id,
                     message_id=session.message_id,
-                    text=message,
+                    text=full_message,
                     parse_mode='HTML',
-                    reply_markup=buttons,  # Добавляем кнопки при обновлении
-                    disable_web_page_preview=True
+                    reply_markup=buttons
                 )
+                self.logger.info("Sessions list updated successfully")
+                
             except BadRequest as e:
                 if "message is not modified" in str(e):
-                    pass
+                    self.logger.info("Message content hasn't changed")
                 elif "message to edit not found" in str(e):
-                    self.logger.error(
-                        f"Message {session.message_id} not found in chat {session.chat_id}"
-                    )
+                    self.logger.error(f"Message {session.message_id} not found in chat {session.chat_id}")
                 else:
+                    self.logger.error(f"Bad request error: {str(e)}")
                     raise
             except Forbidden:
-                self.logger.error(
-                    f"Bot was blocked by user in chat {session.chat_id}"
-                )
+                self.logger.error(f"Bot was blocked by user in chat {session.chat_id}")
             except TelegramError as e:
-                self.logger.error(
-                    f"Failed to update message: {e}",
-                    exc_info=True
-                )
-                try:
-                    buttons = create_session_buttons(all_sessions)
-                    new_message = await context.bot.send_message(
-                        chat_id=session.chat_id,
-                        text=message,
-                        parse_mode='HTML',
-                        reply_markup=buttons  # Добавляем кнопки при создании нового сообщения
-                    )
-                    self.db.update_session_message(
-                        session_id,
-                        new_message.message_id,
-                        session.chat_id
-                    )
-                except TelegramError:
-                    self.logger.error(
-                        "Failed to send new message",
-                        exc_info=True
-                    )
+                self.logger.error(f"Failed to update message: {e}", exc_info=True)
                     
         except Exception as e:
-            self.logger.error(
-                f"Error in update_session_message: {e}",
-                exc_info=True
-            )
+            self.logger.error(f"Error in update_session_message: {e}", exc_info=True)
 
-    async def refresh_sessions(self, update: Update, 
-                             context: ContextTypes.DEFAULT_TYPE) -> None:
+    async def refresh_sessions(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Refresh all active sessions"""
         query = update.callback_query
         if query:
@@ -159,6 +152,4 @@ class CommandHandler:
         except Exception as e:
             self.logger.error(f"Error refreshing sessions: {e}", exc_info=True)
             if query:
-                await query.message.reply_text(
-                    "❌ Failed to update lists"
-                )
+                await query.message.reply_text("❌ Failed to update lists")

@@ -5,11 +5,23 @@ from telegram.ext import ContextTypes
 from datetime import datetime
 from typing import List
 
-from .common import CommandHandler
-from database.models import PlayerStatus
-from utils.formatting import format_players_list, create_session_buttons, create_join_menu
+try:
+    from .common import CommandHandler
+except ImportError:
+    from handlers.common import CommandHandler
 
-class UserCommandHandler(CommandHandler):
+from database.models import PlayerStatus
+from utils.formatting import (
+    format_players_list, 
+    create_session_buttons, 
+    create_join_menu
+)
+
+class UserCommandHandler(CommandHandler):  # Правильное наследование
+    """Обработчик пользовательских команд"""
+
+    # Остальной код остается без изменений
+    # Теперь методы базового класса доступны через self
     """Обработчик пользовательских команд"""
 
     async def help_command(self, update: Update, 
@@ -74,18 +86,31 @@ class UserCommandHandler(CommandHandler):
 
     # В файле handlers/user_handlers.py
 
-    async def button_handler(self, update: Update, 
-                           context: ContextTypes.DEFAULT_TYPE) -> None:
+    async def button_handler(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Handle button presses"""
         query = update.callback_query
         await query.answer()
 
         if query.data == "back_to_main":
-            # Return to main menu
-            sessions = self.db.get_sessions_for_date(datetime.now().date())
-            await query.message.edit_reply_markup(
-                reply_markup=create_session_buttons(sessions)
-            )
+            # Получаем сессию из callback_data последней нажатой кнопки
+            session_data = context.user_data.get('last_session_id')
+            if not session_data:
+                self.logger.error("No session data found for back button")
+                return
+                
+            session = self.db.get_session(session_data)
+            if not session:
+                self.logger.error(f"Session {session_data} not found")
+                return
+                
+            # Получаем все сессии на эту дату и обновляем клавиатуру
+            sessions = self.db.get_sessions_for_date(session.date)
+            buttons = create_session_buttons(sessions)
+            
+            try:
+                await query.message.edit_reply_markup(reply_markup=buttons)
+            except Exception as e:
+                self.logger.error(f"Error updating keyboard: {e}")
             return
 
         if query.data == "cancel_registration":
@@ -110,18 +135,15 @@ class UserCommandHandler(CommandHandler):
                 reply_markup=InlineKeyboardMarkup(time_buttons)
             )
             return
-
-        if query.data == "refresh_sessions":
-            # Handle refresh button
-            await self.refresh_sessions(update, context)
-            return
-            
+                
         # Get session ID from callback_data for other actions
         data_parts = query.data.split('_')
         action = data_parts[0]
         
         if action in ['join', 'cancel']:
             session_id = int(data_parts[-1])
+            # Сохраняем ID сессии для использования в back_to_main
+            context.user_data['last_session_id'] = session_id
             
             if query.data.startswith('join_menu_'):
                 # Show join type menu
@@ -144,64 +166,79 @@ class UserCommandHandler(CommandHandler):
             elif action == 'cancel':
                 await self.leave_session_by_id(update, context, session_id)
 
-    async def join_session_by_id(self, update: Update, 
-                               context: ContextTypes.DEFAULT_TYPE,
-                               session_id: int) -> None:
+    async def join_session_by_id(self, update: Update, context: ContextTypes.DEFAULT_TYPE, session_id: int) -> None:
         """Add player to session by ID"""
         if not update.effective_user:
             return
 
-        # Check if bot is enabled
-        if not self.db.is_bot_enabled():
+        try:
+            self.logger.info(f"Joining session {session_id} for user {update.effective_user.id}")
+
+            # Check if bot is enabled
+            if not self.db.is_bot_enabled():
+                await context.bot.send_message(
+                    chat_id=update.effective_chat.id,
+                    text=self.messages.ERRORS['bot_disabled']
+                )
+                return
+
+            session = self.db.get_session(session_id)
+            if not session:
+                self.logger.error(f"Session {session_id} not found")
+                await context.bot.send_message(
+                    chat_id=update.effective_chat.id,
+                    text=self.messages.ERRORS['invalid_session']
+                )
+                return
+
+            # Check if already registered
+            if self.db.is_player_registered(session_id, update.effective_user.id):
+                self.logger.info(f"User {update.effective_user.id} already registered for session {session_id}")
+                await context.bot.send_message(
+                    chat_id=update.effective_chat.id,
+                    text=self.messages.ERRORS['already_registered']
+                )
+                return
+
+            # Add player
+            player = self.db.add_player(
+                full_name=update.effective_user.full_name,
+                telegram_id=update.effective_user.id
+            )
+            self.logger.info(f"Added player {player.id} to database")
+
+            # Get current players count
+            current_players = self.db.get_session_players(session_id)
+            self.logger.info(f"Current players in session: {len(current_players)}, max: {session.max_players}")
+            
+            # Determine status based on current count
+            status = PlayerStatus.MAIN if len(current_players) < session.max_players else PlayerStatus.RESERVE
+
+            # Register player
+            registration = self.db.register_player(session_id, player.id, status)
+            self.logger.info(f"Registered player {player.id} with status {status}")
+
+            # Send success message
+            message = self.messages.SUCCESS['player_added'] if status == PlayerStatus.MAIN \
+                    else self.messages.ERRORS['session_full']
             await context.bot.send_message(
                 chat_id=update.effective_chat.id,
-                text=self.messages.ERRORS['bot_disabled']
+                text=message
             )
-            return
 
-        session = self.db.get_session(session_id)
-        if not session:
+            # Update session message
+            self.logger.info("Updating session message")
+            await self.update_session_message(context, session_id)
+            
+            # Log command
+            self.log_command_usage(update, 'join')
+
+        except Exception as e:
+            self.logger.error(f"Error in join_session_by_id: {e}", exc_info=True)
             await context.bot.send_message(
                 chat_id=update.effective_chat.id,
-                text=self.messages.ERRORS['invalid_session']
+                text="An error occurred while joining the session. Please try again."
             )
-            return
-
-        # Check if already registered
-        if self.db.is_player_registered(session_id, update.effective_user.id):
-            await context.bot.send_message(
-                chat_id=update.effective_chat.id,
-                text=self.messages.ERRORS['already_registered']
-            )
-            return
-
-        # Add player
-        player = self.db.add_player(
-            full_name=update.effective_user.full_name,
-            telegram_id=update.effective_user.id
-        )
-
-        # Check current players count
-        current_players = self.db.get_session_players(session_id)
-        status = PlayerStatus.MAIN if len(current_players) < session.max_players \
-                else PlayerStatus.RESERVE
-
-        # Register player
-        self.db.register_player(session_id, player.id, status)
-
-        # Send success message
-        message = self.messages.SUCCESS['player_added'] if status == PlayerStatus.MAIN \
-                 else self.messages.ERRORS['session_full']
-        await context.bot.send_message(
-            chat_id=update.effective_chat.id,
-            text=message
-        )
-
-        # Update session message
-        await self.update_session_message(context, session_id)
-        
-        # Log command
-        self.log_command_usage(update, 'join')
 
     async def add_multiple_players(self, update: Update, 
                                  context: ContextTypes.DEFAULT_TYPE,
@@ -244,21 +281,16 @@ class UserCommandHandler(CommandHandler):
         # Update session message
         await self.update_session_message(context, session_id)
 
+    # handlers/user_handlers.py
+
     async def leave_session_by_id(self, update: Update, 
                                 context: ContextTypes.DEFAULT_TYPE,
                                 session_id: int) -> None:
-        """
-        Выход из сессии по её ID
-        
-        Args:
-            update: объект обновления Telegram
-            context: контекст бота
-            session_id: ID сессии
-        """
+        """Leave session by ID"""
         if not update.effective_user:
             return
 
-        # Проверяем, включен ли бот
+        # Check if bot is enabled
         if not self.db.is_bot_enabled():
             await update.callback_query.message.reply_text(
                 self.messages.ERRORS['bot_disabled']
@@ -272,38 +304,45 @@ class UserCommandHandler(CommandHandler):
             )
             return
 
-        # Проверяем регистрацию
+        # Check registration
         if not self.db.is_player_registered(session_id, update.effective_user.id):
             await update.callback_query.message.reply_text(
                 self.messages.ERRORS['not_registered']
             )
             return
 
-        # Удаляем игрока из сессии
-        self.db.unregister_player(session_id, update.effective_user.id)
-        
-        # Перемещаем игрока из резерва, если есть
-        moved_player = self.db.move_reserve_to_main(session_id)
-        
-        await update.callback_query.message.reply_text(
-            self.messages.SUCCESS['player_removed']
-        )
-        
-        # Если кто-то был перемещен из резерва, уведомляем его
-        if moved_player and moved_player.telegram_id:
-            try:
-                await context.bot.send_message(
-                    chat_id=moved_player.telegram_id,
-                    text=self.messages.SUCCESS['moved_to_main']
-                )
-            except Exception as e:
-                self.logger.error(f"Failed to notify player: {e}")
-        
-        # Обновляем сообщение со списком
-        await self.update_session_message(context, session_id)
-        
-        # Логируем команду
-        self.log_command_usage(update, 'leave')
+        try:
+            # Remove player from session
+            self.db.unregister_player(session_id, update.effective_user.id)
+            
+            # Move player from reserve if exists
+            moved_player = self.db.move_reserve_to_main(session_id)
+            
+            await update.callback_query.message.reply_text(
+                self.messages.SUCCESS['player_removed']
+            )
+            
+            # Notify moved player
+            if moved_player and moved_player.telegram_id:
+                try:
+                    await context.bot.send_message(
+                        chat_id=moved_player.telegram_id,
+                        text=self.messages.SUCCESS['moved_to_main']
+                    )
+                except Exception as e:
+                    self.logger.error(f"Failed to notify player: {e}", exc_info=True)
+            
+            # Update session message with buttons
+            await self.update_session_message(context, session_id)
+            
+            # Log command
+            self.log_command_usage(update, 'leave')
+            
+        except Exception as e:
+            self.logger.error(f"Error in leave_session: {e}", exc_info=True)
+            await update.callback_query.message.reply_text(
+                "Error removing from session. Please try again."
+            )
 
     async def handle_message(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Обработка обычных сообщений"""

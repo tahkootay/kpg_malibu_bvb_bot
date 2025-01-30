@@ -3,33 +3,45 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
 from datetime import datetime, timedelta
-import pytz
 from typing import List
 
-from .common import CommandHandler
+try:
+    from .common import CommandHandler
+except ImportError:
+    from handlers.common import CommandHandler
+
 from database.models import PlayerStatus
 from utils.validators import parse_time_range
-from utils.formatting import format_players_list, format_reserve_list, create_session_buttons
-
-class AdminCommandHandler(CommandHandler):
+from utils.formatting import (
+    format_players_list, 
+    format_reserve_list, 
+    create_session_buttons
+)
+class AdminCommandHandler(CommandHandler):  
+    # Теперь методы базового класса доступны через self
     """Handler for admin commands"""
-
- # handlers/admin_handlers.py
 
  # handlers/admin_handlers.py
 
     async def create_session(self, update: Update, 
                           context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Create new session"""
+        """Create new sessions list for tomorrow"""
         if not update.message:
             return
 
         if not await self.check_admin(update, context):
             return
 
-        sessions_to_create = []
         tomorrow = datetime.now().date() + timedelta(days=1)
 
+        # Check if sessions list already exists
+        if self.db.has_sessions_for_date(tomorrow):
+            await update.message.reply_text(
+                f"Sessions list for {tomorrow.strftime(self.config.FORMAT_SETTINGS['date_format'])} already exists!"
+            )
+            return
+
+        sessions_to_create = []
         # If no arguments, create default sessions
         if not context.args:
             sessions_to_create = [
@@ -95,6 +107,7 @@ class AdminCommandHandler(CommandHandler):
             )
 
         # Log command
+        self.logger.info(f"Updated message info for session {session.id}: message_id={sent_message.message_id}, chat_id={update.effective_chat.id}")
         self.log_command_usage(update, 'create_session')
 
     async def toggle_bot(self, update: Update, 

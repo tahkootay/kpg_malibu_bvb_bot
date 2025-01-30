@@ -261,3 +261,2081 @@ telegram.error.BadRequest: Query is too old and response timeout expired or quer
 2025-01-29 23:35:29,362 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
 2025-01-29 23:35:43,462 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
 2025-01-29 23:35:57,862 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 09:24:37,886 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 09:25:39,071 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 09:25:57,031 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 09:26:29,881 - kpg_malibu_bvb - ERROR - Error updating message: Message to edit not found
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message to edit not found
+2025-01-30 09:26:31,170 - kpg_malibu_bvb - WARNING - Session 6 not found or missing message info
+2025-01-30 09:26:37,439 - kpg_malibu_bvb - WARNING - Session 18 not found or missing message info
+2025-01-30 09:26:37,440 - kpg_malibu_bvb - WARNING - Session 20 not found or missing message info
+2025-01-30 09:26:37,441 - kpg_malibu_bvb - WARNING - Session 22 not found or missing message info
+2025-01-30 09:26:37,443 - kpg_malibu_bvb - WARNING - Session 24 not found or missing message info
+2025-01-30 09:26:45,403 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:26:45,406 - kpg_malibu_bvb - WARNING - Session 7 not found or missing message info
+2025-01-30 09:26:48,977 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:26:49,375 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:26:49,774 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:26:54,780 - kpg_malibu_bvb - ERROR - Error updating message: Timed out
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 67, in map_httpcore_exceptions
+    yield
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 371, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1559, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1646, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1674, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1711, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1748, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 370, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 84, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 285, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2025-01-30 09:26:59,738 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:26:59,741 - kpg_malibu_bvb - WARNING - Session 19 not found or missing message info
+2025-01-30 09:26:59,743 - kpg_malibu_bvb - WARNING - Session 21 not found or missing message info
+2025-01-30 09:26:59,744 - kpg_malibu_bvb - WARNING - Session 23 not found or missing message info
+2025-01-30 09:26:59,776 - kpg_malibu_bvb - WARNING - Session 25 not found or missing message info
+2025-01-30 09:27:00,198 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:00,611 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:04,222 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:04,637 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:05,054 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:05,464 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:06,570 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 81, in button_handler
+    await query.answer()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_callbackquery.py", line 187, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 900, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3767, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2025-01-30 09:27:07,143 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 81, in button_handler
+    await query.answer()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_callbackquery.py", line 187, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 900, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3767, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2025-01-30 09:27:07,556 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 81, in button_handler
+    await query.answer()
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_callbackquery.py", line 187, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 900, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3767, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+2025-01-30 09:27:31,464 - kpg_malibu_bvb - ERROR - Error updating message: Message to edit not found
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message to edit not found
+2025-01-30 09:27:31,924 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:32,354 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:32,358 - kpg_malibu_bvb - WARNING - Session 6 not found or missing message info
+2025-01-30 09:27:32,808 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:33,238 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:33,678 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:37,318 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:37,753 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:37,756 - kpg_malibu_bvb - WARNING - Session 18 not found or missing message info
+2025-01-30 09:27:37,758 - kpg_malibu_bvb - WARNING - Session 20 not found or missing message info
+2025-01-30 09:27:37,759 - kpg_malibu_bvb - WARNING - Session 22 not found or missing message info
+2025-01-30 09:27:37,764 - kpg_malibu_bvb - WARNING - Session 24 not found or missing message info
+2025-01-30 09:27:38,200 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:38,633 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:39,086 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:42,809 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:43,264 - kpg_malibu_bvb - ERROR - Error updating message: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 379, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2025-01-30 09:27:43,693 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 16 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 16 seconds
+2025-01-30 09:27:44,128 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 16 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 16 seconds
+2025-01-30 09:27:44,555 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 15 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 15 seconds
+2025-01-30 09:27:44,558 - kpg_malibu_bvb - WARNING - Session 7 not found or missing message info
+2025-01-30 09:27:44,977 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 15 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 15 seconds
+2025-01-30 09:27:45,408 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 14 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 14 seconds
+2025-01-30 09:27:45,837 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 14 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 14 seconds
+2025-01-30 09:27:46,325 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 13 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 13 seconds
+2025-01-30 09:27:46,749 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 13 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 13 seconds
+2025-01-30 09:27:46,752 - kpg_malibu_bvb - WARNING - Session 19 not found or missing message info
+2025-01-30 09:27:46,752 - kpg_malibu_bvb - WARNING - Session 21 not found or missing message info
+2025-01-30 09:27:46,753 - kpg_malibu_bvb - WARNING - Session 23 not found or missing message info
+2025-01-30 09:27:46,754 - kpg_malibu_bvb - WARNING - Session 25 not found or missing message info
+2025-01-30 09:27:47,180 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 12 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 12 seconds
+2025-01-30 09:27:47,611 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 12 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 12 seconds
+2025-01-30 09:27:48,031 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 12 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 12 seconds
+2025-01-30 09:27:48,457 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 11 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 11 seconds
+2025-01-30 09:27:48,892 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 11 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 11 seconds
+2025-01-30 09:27:49,354 - kpg_malibu_bvb - ERROR - Error updating message: Flood control exceeded. Retry in 10 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 83, in update_session_message
+    await context.bot.edit_message_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 1618, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 3868, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 10 seconds
+2025-01-30 09:27:49,784 - kpg_malibu_bvb - ERROR - Error refreshing sessions: Flood control exceeded. Retry in 10 seconds
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 111, in refresh_sessions
+    await query.message.reply_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_message.py", line 1809, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2820, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 1018, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 10 seconds
+2025-01-30 09:27:50,219 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 111, in refresh_sessions
+    await query.message.reply_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_message.py", line 1809, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2820, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 1018, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 10 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 116, in button_handler
+    await self.refresh_sessions(update, context)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/common.py", line 118, in refresh_sessions
+    await query.message.reply_text(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_message.py", line 1809, in reply_text
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 2820, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 1018, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 581, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 736, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 365, in _request_wrapper
+    raise RetryAfter(retry_after)
+telegram.error.RetryAfter: Flood control exceeded. Retry in 9 seconds
+2025-01-30 09:34:39,732 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 09:34:51,132 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 09:35:02,012 - kpg_malibu_bvb - ERROR - No sessions found for update
+2025-01-30 09:35:02,013 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 10:53:11,358 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 10:53:51,145 - kpg_malibu_bvb - INFO - Command: sessions | User: 43704386 | Chat: -1001931349972
+2025-01-30 11:08:04,570 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 31, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/database/database.py", line 462, in has_sessions_for_date
+    cursor.execute('''
+sqlite3.OperationalError: no such table: sessions
+2025-01-30 11:09:11,306 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 11:09:23,337 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 11:09:35,388 - kpg_malibu_bvb - ERROR - No sessions found for update
+2025-01-30 11:09:35,389 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 11:37:36,783 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 11:37:43,801 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 31, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'has_sessions_for_date'
+2025-01-30 11:37:48,454 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 31, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'has_sessions_for_date'
+2025-01-30 11:37:56,303 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 31, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'has_sessions_for_date'
+2025-01-30 11:38:11,314 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 31, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'has_sessions_for_date'
+2025-01-30 11:40:03,530 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 11:40:12,279 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 31, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'has_sessions_for_date'
+2025-01-30 11:45:29,709 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 11:45:35,570 - kpg_malibu_bvb - INFO - Updated message info for session 4: message_id=1079, chat_id=-1001931349972
+2025-01-30 11:45:35,571 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 11:45:53,855 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 135, in button_handler
+    await self.join_session_by_id(update, context, session_id)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 155, in join_session_by_id
+    if not self.db.is_bot_enabled():
+           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'is_bot_enabled'
+2025-01-30 11:46:02,483 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 135, in button_handler
+    await self.join_session_by_id(update, context, session_id)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 155, in join_session_by_id
+    if not self.db.is_bot_enabled():
+           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Database' object has no attribute 'is_bot_enabled'
+2025-01-30 11:55:25,948 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 11:55:58,359 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 11:56:02,576 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1083, chat_id=-1001931349972
+2025-01-30 11:56:02,579 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 11:56:15,128 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 135, in button_handler
+    await self.join_session_by_id(update, context, session_id)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 201, in join_session_by_id
+    await self.update_session_message(context, session_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserCommandHandler' object has no attribute 'update_session_message'
+2025-01-30 12:05:39,230 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 12:05:46,841 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 12:06:12,685 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 12:06:17,566 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1088, chat_id=-1001931349972
+2025-01-30 12:06:17,567 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:06:24,335 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1088, chat_id: -1001931349972
+2025-01-30 12:06:24,337 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:06:24,375 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-30 12:06:24,403 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:06:24,403 - kpg_malibu_bvb - INFO - Updating message 1088 in chat -1001931349972
+2025-01-30 12:06:24,838 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:06:24,840 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:08:40,351 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 34, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/database/database.py", line 417, in has_sessions_for_date
+    cursor.execute('''
+sqlite3.OperationalError: no such table: sessions
+2025-01-30 12:08:56,015 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 12:09:00,861 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1096, chat_id=-1001931349972
+2025-01-30 12:09:00,862 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:09:16,211 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:09:16,216 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:09:16,239 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-30 12:09:16,313 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:09:16,315 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:09:16,794 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:09:16,795 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:09:42,998 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:09:43,003 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:09:43,033 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-30 12:09:43,061 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:09:43,062 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:09:43,496 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:09:43,496 - kpg_malibu_bvb - INFO - Command: join | User: 5988856792 | Chat: -1001931349972
+2025-01-30 12:10:00,639 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:10:00,649 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:10:00,654 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-30 12:10:00,659 - kpg_malibu_bvb - INFO - Session 2: 1 players, 0 in reserve
+2025-01-30 12:10:00,663 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:10:01,174 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:10:01,175 - kpg_malibu_bvb - INFO - Command: join | User: 5988856792 | Chat: -1001931349972
+2025-01-30 12:10:05,440 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:10:05,474 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:10:05,509 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-30 12:10:05,554 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:10:05,555 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:10:05,993 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:10:05,994 - kpg_malibu_bvb - INFO - Command: leave | User: 5988856792 | Chat: -1001931349972
+2025-01-30 12:10:10,105 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:10:10,110 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:10:10,180 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-30 12:10:10,183 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:10:10,184 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:10:10,620 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:10:10,620 - kpg_malibu_bvb - INFO - Command: leave | User: 5988856792 | Chat: -1001931349972
+2025-01-30 12:10:38,564 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:10:38,569 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:10:38,598 - kpg_malibu_bvb - INFO - Session 1: 4 players, 0 in reserve
+2025-01-30 12:10:38,647 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:10:38,648 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:10:39,114 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:11:12,927 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:11:12,957 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:11:12,971 - kpg_malibu_bvb - INFO - Session 1: 6 players, 1 in reserve
+2025-01-30 12:11:12,976 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:11:12,977 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:11:13,461 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:12:40,062 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:12:40,087 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:12:40,119 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-30 12:12:40,172 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:12:40,180 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:12:40,597 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:13:06,311 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:13:06,333 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:13:06,358 - kpg_malibu_bvb - INFO - Session 1: 6 players, 5 in reserve
+2025-01-30 12:13:06,398 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:13:06,400 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:13:06,858 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:13:06,858 - kpg_malibu_bvb - INFO - Command: join | User: 5988856792 | Chat: -1001931349972
+2025-01-30 12:16:09,471 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:16:09,474 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:16:09,540 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-30 12:16:09,599 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:16:09,601 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:16:10,089 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:16:10,089 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:17:22,442 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:17:22,444 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:17:22,446 - kpg_malibu_bvb - INFO - Session 1: 6 players, 5 in reserve
+2025-01-30 12:17:22,448 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:17:22,449 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:17:22,882 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:17:22,882 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:17:28,226 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:17:28,227 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:17:28,229 - kpg_malibu_bvb - INFO - Session 1: 7 players, 3 in reserve
+2025-01-30 12:17:28,231 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:17:28,231 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:17:28,665 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:17:28,665 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:17:37,845 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1096, chat_id: -1001931349972
+2025-01-30 12:17:37,846 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:17:37,848 - kpg_malibu_bvb - INFO - Session 1: 7 players, 4 in reserve
+2025-01-30 12:17:37,853 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:17:37,854 - kpg_malibu_bvb - INFO - Updating message 1096 in chat -1001931349972
+2025-01-30 12:17:38,290 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:17:38,290 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:28:37,509 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 12:29:04,972 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/admin_handlers.py", line 38, in create_session
+    if self.db.has_sessions_for_date(tomorrow):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/database/database.py", line 417, in has_sessions_for_date
+    cursor.execute('''
+sqlite3.OperationalError: no such table: sessions
+2025-01-30 12:29:19,930 - kpg_malibu_bvb - INFO - Bot started
+2025-01-30 12:29:24,284 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1124, chat_id=-1001931349972
+2025-01-30 12:29:24,284 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:29:32,698 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-30 12:29:32,704 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-30 12:29:32,707 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 6
+2025-01-30 12:29:32,710 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-30 12:29:33,169 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-30 12:29:33,175 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1124, chat_id: -1001931349972
+2025-01-30 12:29:33,196 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:29:33,207 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-30 12:29:33,238 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:29:33,239 - kpg_malibu_bvb - INFO - Updating message 1124 in chat -1001931349972
+2025-01-30 12:29:33,686 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:29:33,687 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:31:22,721 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1124, chat_id: -1001931349972
+2025-01-30 12:31:22,724 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:31:22,774 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-30 12:31:22,793 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:31:22,794 - kpg_malibu_bvb - INFO - Updating message 1124 in chat -1001931349972
+2025-01-30 12:31:23,280 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:31:23,281 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-30 12:31:33,217 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-30 12:31:33,221 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-30 12:31:33,228 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 6
+2025-01-30 12:31:33,250 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-30 12:31:33,702 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-30 12:31:33,705 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1124, chat_id: -1001931349972
+2025-01-30 12:31:33,706 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-01-31
+2025-01-30 12:31:33,715 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-30 12:31:33,730 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-30 12:31:33,733 - kpg_malibu_bvb - INFO - Updating message 1124 in chat -1001931349972
+2025-01-30 12:31:34,264 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-30 12:31:34,264 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-30 17:08:39,189 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 67, in map_httpcore_exceptions
+    yield
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 371, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 268, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1559, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1646, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1674, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1711, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_client.py", line 1748, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 370, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/httpx/_transports/default.py", line 84, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_updater.py", line 715, in _network_loop_retry
+    if not await action_cb():
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_updater.py", line 384, in polling_action_cb
+    raise exc
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_updater.py", line 373, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 618, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 542, in decorator
+    result = await func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 4164, in get_updates
+    await self._post(
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 630, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_extbot.py", line 347, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/_bot.py", line 658, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 200, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 340, in _request_wrapper
+    raise exc
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_baserequest.py", line 330, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/request/_httpxrequest.py", line 292, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2025-01-30 17:08:40,688 - kpg_malibu_bvb - ERROR - Error in error handler: 'NoneType' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 40, in error_handler
+    if update.message:
+       ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'message'
