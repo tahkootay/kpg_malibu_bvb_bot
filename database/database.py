@@ -4,9 +4,25 @@ import sqlite3
 from datetime import datetime, date, time
 from typing import List, Optional, Tuple, Dict
 import logging
+import os
 from dataclasses import asdict
 
-from .models import Player, Session, Registration, PlayerStatus
+try:
+    from .models import Player, Session, Registration, PlayerStatus
+except ImportError:
+    from models import Player, Session, Registration, PlayerStatus
+
+class BotConfig:
+    """Основной класс конфигурации бота."""
+    
+    # Токен бота (должен быть установлен через переменную окружения)
+    TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+    
+    # Настройки базы данных
+    DATABASE = {
+        'name': 'kpg_malibu_bvb.db',
+        'path': 'database/'  # Путь относительно корня проекта
+    }
 
 class Database:
     """Класс для работы с базой данных"""
@@ -50,7 +66,7 @@ class Database:
                 )
             ''')
             
-            # Таблица регистраций
+            # Таблица регистраций с новыми полями
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS registrations (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -58,8 +74,11 @@ class Database:
                     player_id INTEGER NOT NULL,
                     status TEXT NOT NULL,
                     registration_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    registered_by_id INTEGER,
+                    registered_by_name TEXT,
                     FOREIGN KEY (session_id) REFERENCES sessions (id),
-                    FOREIGN KEY (player_id) REFERENCES players (id)
+                    FOREIGN KEY (player_id) REFERENCES players (id),
+                    FOREIGN KEY (registered_by_id) REFERENCES players (id)
                 )
             ''')
             
@@ -191,8 +210,9 @@ class Database:
             ''', (message_id, chat_id, session_id))
             conn.commit()
 
-    def register_player(self, session_id: int, player_id: int, 
-                       status: PlayerStatus) -> Registration:
+    def register_player(self, session_id: int, player_id: int, status: PlayerStatus,
+                       registered_by_id: Optional[int] = None, 
+                       registered_by_name: Optional[str] = None) -> Registration:
         """Регистрация игрока на сессию"""
         with sqlite3.connect(self.db_path) as conn:
             try:
@@ -212,17 +232,21 @@ class Database:
                     # Обновляем статус существующей регистрации
                     cursor.execute('''
                         UPDATE registrations 
-                        SET status = ?, registration_time = ?
+                        SET status = ?, registration_time = ?, 
+                            registered_by_id = ?, registered_by_name = ?
                         WHERE id = ?
-                    ''', (status.value, now.isoformat(), existing[0]))
+                    ''', (status.value, now.isoformat(), registered_by_id, 
+                          registered_by_name, existing[0]))
                     registration_id = existing[0]
                 else:
                     # Создаем новую регистрацию
                     cursor.execute('''
                         INSERT INTO registrations 
-                        (session_id, player_id, status, registration_time)
-                        VALUES (?, ?, ?, ?)
-                    ''', (session_id, player_id, status.value, now.isoformat()))
+                        (session_id, player_id, status, registration_time, 
+                         registered_by_id, registered_by_name)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    ''', (session_id, player_id, status.value, now.isoformat(),
+                          registered_by_id, registered_by_name))
                     registration_id = cursor.lastrowid
 
                 # Явный коммит транзакции
@@ -233,7 +257,9 @@ class Database:
                     session_id=session_id,
                     player_id=player_id,
                     status=status,
-                    registration_time=now
+                    registration_time=now,
+                    registered_by_id=registered_by_id,
+                    registered_by_name=registered_by_name
                 )
                 
             except sqlite3.Error as e:
@@ -266,7 +292,9 @@ class Database:
                     session_id=row[5],
                     player_id=row[6],
                     status=PlayerStatus(row[7]),
-                    registration_time=datetime.fromisoformat(row[8])
+                    registration_time=datetime.fromisoformat(row[8]),
+                    registered_by_id=row[9] if row[9] is not None else None,
+                    registered_by_name=row[10]
                 )
                 results.append((player, registration))
             
@@ -297,7 +325,9 @@ class Database:
                     session_id=row[5],
                     player_id=row[6],
                     status=PlayerStatus(row[7]),
-                    registration_time=datetime.fromisoformat(row[8])
+                    registration_time=datetime.fromisoformat(row[8]),
+                    registered_by_id=row[9] if row[9] is not None else None,
+                    registered_by_name=row[10]
                 )
                 results.append((player, registration))
             
@@ -307,26 +337,68 @@ class Database:
         """Проверка, зарегистрирован ли игрок на сессию"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
+            self.logger.info(f"Checking registration for session {session_id}, user {telegram_id}")
+            
             cursor.execute('''
-                SELECT r.id
+                SELECT r.id, r.status, p.id as player_id, p.full_name
                 FROM registrations r
                 JOIN players p ON r.player_id = p.id
                 WHERE r.session_id = ? AND p.telegram_id = ?
             ''', (session_id, telegram_id))
             
-            return cursor.fetchone() is not None
+            result = cursor.fetchone()
+            if result:
+                self.logger.info(f"Found registration id={result[0]}, status={result[1]} for player {result[2]} ({result[3]})")
+            else:
+                self.logger.info("No registration found")
+                
+            return result is not None
 
     def unregister_player(self, session_id: int, telegram_id: int) -> None:
         """Отмена регистрации игрока"""
         with sqlite3.connect(self.db_path) as conn:
-            cursor = conn.cursor()
-            cursor.execute('''
-                DELETE FROM registrations
-                WHERE session_id = ? AND player_id IN (
+            try:
+                cursor = conn.cursor()
+                self.logger.info(f"Unregistering player with telegram_id {telegram_id} from session {session_id}")
+                
+                # Получаем игрока по telegram_id
+                cursor.execute('''
                     SELECT id FROM players WHERE telegram_id = ?
-                )
-            ''', (session_id, telegram_id))
-            conn.commit()
+                ''', (telegram_id,))
+                
+                player_row = cursor.fetchone()
+                if not player_row:
+                    self.logger.error(f"Player with telegram_id {telegram_id} not found")
+                    return
+                    
+                player_id = player_row[0]
+                self.logger.info(f"Found player with id {player_id}")
+                
+                # Проверяем регистрацию
+                cursor.execute('''
+                    SELECT id, status FROM registrations 
+                    WHERE session_id = ? AND player_id = ?
+                ''', (session_id, player_id))
+                
+                registration = cursor.fetchone()
+                if not registration:
+                    self.logger.error(f"Registration not found for player {player_id} in session {session_id}")
+                    return
+                    
+                # Удаляем регистрацию
+                cursor.execute('''
+                    DELETE FROM registrations
+                    WHERE id = ?
+                ''', (registration[0],))
+                
+                deleted_count = cursor.rowcount
+                self.logger.info(f"Deleted {deleted_count} registration(s)")
+                conn.commit()
+                
+            except sqlite3.Error as e:
+                self.logger.error(f"Database error in unregister_player: {e}")
+                conn.rollback()
+                raise
 
     def move_reserve_to_main(self, session_id: int) -> Optional[Player]:
         """Перемещение первого игрока из резерва в основной состав"""
@@ -414,6 +486,8 @@ class Database:
         """
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
+            self.logger.info(f"Checking for sessions on date: {date.isoformat()}")
+            
             cursor.execute('''
                 SELECT COUNT(*) 
                 FROM sessions 
@@ -421,6 +495,7 @@ class Database:
             ''', (date.isoformat(),))
             
             count = cursor.fetchone()[0]
+            self.logger.info(f"Found {count} sessions for date {date.isoformat()}")
             return count > 0
             
     def set_bot_enabled(self, enabled: bool) -> None:
@@ -496,3 +571,61 @@ class Database:
                 'total_players': total_players,
                 'active_players': active_players
             }
+
+    def get_player_registration(self, session_id: int, player_id: int) -> Optional[Registration]:
+        """Get player's registration info for a session"""
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.cursor()
+            self.logger.info(f"Getting registration info for player {player_id} in session {session_id}")
+            
+            # Сначала проверим существование регистрации
+            cursor.execute('''
+                SELECT r.*, rb.telegram_id as registered_by_telegram_id, rb.full_name as registered_by_name
+                FROM registrations r
+                LEFT JOIN players p ON p.id = r.player_id
+                LEFT JOIN players rb ON rb.id = r.registered_by_id
+                WHERE r.session_id = ? AND r.player_id = ?
+            ''', (session_id, player_id))
+            
+            row = cursor.fetchone()
+            if not row:
+                self.logger.warning(f"No registration found for player {player_id} in session {session_id}")
+                return None
+                
+            # Логируем найденные данные
+            self.logger.info(f"Found registration: {row}")
+            
+            reg = Registration(
+                id=row[0],
+                session_id=row[1],
+                player_id=row[2],
+                status=PlayerStatus(row[3]),
+                registration_time=datetime.fromisoformat(row[4]),
+                registered_by_id=row[5] if row[5] is not None else None,
+                registered_by_name=row[7] if row[7] is not None else None
+            )
+            self.logger.info(f"Created registration object: {reg}")
+            return reg
+
+    def remove_player_by_id(self, session_id: int, player_id: int) -> bool:
+        """Remove player from session by player ID"""
+        with sqlite3.connect(self.db_path) as conn:
+            try:
+                cursor = conn.cursor()
+                self.logger.info(f"Removing player {player_id} from session {session_id}")
+                
+                cursor.execute('''
+                    DELETE FROM registrations
+                    WHERE session_id = ? AND player_id = ?
+                ''', (session_id, player_id))
+                
+                success = cursor.rowcount > 0
+                conn.commit()
+                
+                self.logger.info(f"Removed {'successfully' if success else 'failed'}")
+                return success
+                
+            except sqlite3.Error as e:
+                self.logger.error(f"Database error in remove_player_by_id: {e}")
+                conn.rollback()
+                raise

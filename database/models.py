@@ -18,8 +18,6 @@ class Player:
     telegram_id: Optional[int]
     created_at: datetime
 
-# В models.py добавляем методы в класс Session:
-
 @dataclass
 class Session:
     """Model for game session"""
@@ -52,3 +50,5 @@ class Registration:
     player_id: int
     status: PlayerStatus
     registration_time: datetime
+    registered_by_id: Optional[int] = None
+    registered_by_name: Optional[str] = None
