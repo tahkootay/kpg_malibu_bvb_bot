@@ -37,6 +37,7 @@ class BotConfig:
     SESSION_SETTINGS = {
         'default_max_players': 6,  # Стандартное максимальное количество игроков
         'min_players': 4,         # Минимальное количество игроков для игры
+        'allow_multiple_sessions': False,  # Разрешать ли запись на несколько сессий
     }
     
     # Форматирование сообщений

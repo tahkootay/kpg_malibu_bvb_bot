@@ -69,46 +69,46 @@ class VolleyballBot:
             logger.error(f"Error creating daily sessions: {e}", exc_info=True)
 
     def run(self):
-        """Run the bot"""
-        try:
-            # Create application
-            application = Application.builder().token(BotConfig.TOKEN).build()
+            """Run the bot"""
+            try:
+                # Create application
+                application = Application.builder().token(BotConfig.TOKEN).build()
 
-            # Add error handler
-            application.add_error_handler(error_handler)
+                # Add error handler
+                application.add_error_handler(error_handler)
 
-            # Register handlers
-            application.add_handler(CommandHandler("help", self.user_handler.help_command))
-            application.add_handler(CommandHandler("sessions", self.user_handler.show_sessions))
-            application.add_handler(CommandHandler("create_session", self.admin_handler.create_session))
-            application.add_handler(CommandHandler("toggle_bot", self.admin_handler.toggle_bot))
-            application.add_handler(CommandHandler("stats", self.admin_handler.show_stats))
-            
-            # Button handlers
-            application.add_handler(CallbackQueryHandler(self.user_handler.button_handler))
-            
-            # Message handlers
-            application.add_handler(MessageHandler(
-                filters.TEXT & ~filters.COMMAND, 
-                self.user_handler.handle_message
-            ))
+                # Register handlers
+                application.add_handler(CommandHandler("help", self.user_handler.help_command))
+                application.add_handler(CommandHandler("sessions", self.user_handler.show_sessions))
+                application.add_handler(CommandHandler("create_session", self.admin_handler.create_session))
+                application.add_handler(CommandHandler("toggle_bot", self.admin_handler.toggle_bot))
+                application.add_handler(CommandHandler("stats", self.admin_handler.show_stats))
+                application.add_handler(CommandHandler("start", self.user_handler.start))
+                
+                # Button handlers
+                application.add_handler(CallbackQueryHandler(self.user_handler.button_handler))
+                
+                # Message handlers
+                application.add_handler(MessageHandler(
+                    filters.TEXT & ~filters.COMMAND, 
+                    self.user_handler.handle_message
+                ))
 
-            # Setup daily posts schedule
-            job_queue = application.job_queue
-            job_queue.run_daily(
-                self.create_daily_sessions,
-                time=BotConfig.AUTOPOST_TIME,
-                days=(0, 1, 2, 3, 4, 5, 6),  # All days of week
-                data={'chat_id': os.getenv('TELEGRAM_CHAT_ID')}
-            )
+                # Setup daily posts schedule
+                job_queue = application.job_queue
+                job_queue.run_daily(
+                    self.create_daily_sessions,
+                    time=BotConfig.AUTOPOST_TIME,
+                    days=(0, 1, 2, 3, 4, 5, 6),  # All days of week
+                    data={'chat_id': os.getenv('TELEGRAM_CHAT_ID')}
+                )
 
-            logger.info("Bot started")
-            application.run_polling()
-            
-        except Exception as e:
-            logger.error(f"Error starting bot: {e}", exc_info=True)
-            raise
-
+                logger.info("Bot started")
+                application.run_polling()
+                
+            except Exception as e:
+                logger.error(f"Error starting bot: {e}")
+                raise
 if __name__ == '__main__':
     bot = VolleyballBot()
     bot.run()

@@ -31,38 +31,62 @@ def create_remove_players_menu(sessions: List[Session]) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(keyboard)
 
 def create_session_players_menu(players: List[Tuple[Player, Registration]], 
+                              reserve: List[Tuple[Player, Registration]],  # добавляем параметр
                               session_id: int,
                               current_user_id: int,
                               is_admin: bool) -> InlineKeyboardMarkup:
     """Create menu with player list for removal"""
     keyboard = []
     
-    # Group players by two in a row
-    current_row = []
-    for player, reg in players:
-        # Allow removal if admin or if current user registered this player
-        if is_admin or (reg.registered_by_id and reg.registered_by_id == current_user_id):
-            current_row.append(
-                InlineKeyboardButton(
-                    f"{player.full_name} ❌",
-                    callback_data=f"remove_player_{session_id}_{player.id}"
+    # Main list header
+    if players:
+        keyboard.append([InlineKeyboardButton("📋 Main list", callback_data="header_main")])
+        
+        # Group players by two in a row
+        current_row = []
+        for player, reg in players:
+            # Allow removal if admin or if current user registered this player
+            if is_admin or (reg.registered_by_id and reg.registered_by_id == current_user_id):
+                current_row.append(
+                    InlineKeyboardButton(
+                        f"{player.full_name} ❌",
+                        callback_data=f"remove_player_{session_id}_{player.id}"
+                    )
                 )
-            )
-            
-            # Add row after collecting two buttons or at last player
-            if len(current_row) == 2:
-                keyboard.append(current_row)
-                current_row = []
+                
+                if len(current_row) == 2:
+                    keyboard.append(current_row)
+                    current_row = []
+        
+        if current_row:  # Add remaining buttons
+            keyboard.append(current_row)
+
+    # Reserve list header and players
+    if reserve:
+        keyboard.append([InlineKeyboardButton("📋 Reserve list", callback_data="header_reserve")])
+        
+        current_row = []
+        for player, reg in reserve:
+            if is_admin or (reg.registered_by_id and reg.registered_by_id == current_user_id):
+                current_row.append(
+                    InlineKeyboardButton(
+                        f"{player.full_name} ❌",
+                        callback_data=f"remove_player_{session_id}_{player.id}"
+                    )
+                )
+                
+                if len(current_row) == 2:
+                    keyboard.append(current_row)
+                    current_row = []
+        
+        if current_row:
+            keyboard.append(current_row)
     
-    # Add remaining buttons if any
-    if current_row:
-        keyboard.append(current_row)
-    
-    # Add back button
+    # Back button
     keyboard.append([
         InlineKeyboardButton(
             "« Back",
-            callback_data="back_to_remove_menu"
+            callback_data="manage_groups"
         )
     ])
     

@@ -405,6 +405,23 @@ class Database:
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             
+            # Сначала проверим количество игроков в основном составе
+            cursor.execute('''
+                SELECT COUNT(*)
+                FROM registrations r
+                WHERE r.session_id = ? AND r.status = ?
+            ''', (session_id, PlayerStatus.MAIN.value))
+            
+            main_count = cursor.fetchone()[0]
+            
+            # Получим информацию о сессии для проверки максимального количества
+            cursor.execute('SELECT max_players FROM sessions WHERE id = ?', (session_id,))
+            max_players = cursor.fetchone()[0]
+            
+            if main_count >= max_players:
+                self.logger.info(f"Main list is full ({main_count}/{max_players})")
+                return None
+                
             # Получаем первого игрока из резерва
             cursor.execute('''
                 SELECT p.*, r.id as reg_id
@@ -418,7 +435,7 @@ class Database:
             result = cursor.fetchone()
             if not result:
                 return None
-                
+                    
             player = Player(
                 id=result[0],
                 full_name=result[1],
@@ -614,17 +631,60 @@ class Database:
                 cursor = conn.cursor()
                 self.logger.info(f"Removing player {player_id} from session {session_id}")
                 
+                # Сначала определяем статус удаляемого игрока
+                cursor.execute('''
+                    SELECT status FROM registrations
+                    WHERE session_id = ? AND player_id = ?
+                ''', (session_id, player_id))
+                
+                status_row = cursor.fetchone()
+                if not status_row:
+                    return False
+                    
+                # Удаляем игрока
                 cursor.execute('''
                     DELETE FROM registrations
                     WHERE session_id = ? AND player_id = ?
                 ''', (session_id, player_id))
                 
-                success = cursor.rowcount > 0
+                deleted = cursor.rowcount > 0
+                
+                if deleted:
+                    # Если удалили игрока из основного состава, проверяем резерв
+                    if status_row[0] == PlayerStatus.MAIN.value:
+                        # Получаем первого из резерва
+                        cursor.execute('''
+                            SELECT player_id
+                            FROM registrations
+                            WHERE session_id = ? AND status = ?
+                            ORDER BY registration_time
+                            LIMIT 1
+                        ''', (session_id, PlayerStatus.RESERVE.value))
+                        
+                        reserve_row = cursor.fetchone()
+                        if reserve_row:
+                            # Проверяем количество в основном составе
+                            cursor.execute('''
+                                SELECT COUNT(*) FROM registrations
+                                WHERE session_id = ? AND status = ?
+                            ''', (session_id, PlayerStatus.MAIN.value))
+                            
+                            main_count = cursor.fetchone()[0]
+                            
+                            cursor.execute('SELECT max_players FROM sessions WHERE id = ?', (session_id,))
+                            max_players = cursor.fetchone()[0]
+                            
+                            if main_count < max_players:
+                                # Переводим в основной состав
+                                cursor.execute('''
+                                    UPDATE registrations
+                                    SET status = ?
+                                    WHERE session_id = ? AND player_id = ?
+                                ''', (PlayerStatus.MAIN.value, session_id, reserve_row[0]))
+                
                 conn.commit()
-                
-                self.logger.info(f"Removed {'successfully' if success else 'failed'}")
-                return success
-                
+                return deleted
+                    
             except sqlite3.Error as e:
                 self.logger.error(f"Database error in remove_player_by_id: {e}")
                 conn.rollback()

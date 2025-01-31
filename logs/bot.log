@@ -2393,3 +2393,1329 @@ AttributeError: 'Database' object has no attribute 'get_player_registration'
 2025-01-31 12:19:55,401 - kpg_malibu_bvb - INFO - Session 2: 3 players, 0 in reserve
 2025-01-31 12:19:55,401 - kpg_malibu_bvb - INFO - Updating message 1268 in chat -1001931349972
 2025-01-31 12:19:55,902 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:10:20,234 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 13:10:30,857 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 13:10:30,858 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 13:10:31,417 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1282, chat_id=-1001931349972
+2025-01-31 13:10:31,417 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:10:39,931 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 13:10:39,932 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 13:10:39,977 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:10:39,978 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 13:10:39,981 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 13:10:39,985 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 6
+2025-01-31 13:10:39,988 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 13:10:40,446 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 13:10:40,449 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1282, chat_id: -1001931349972
+2025-01-31 13:10:40,452 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:10:40,481 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-31 13:10:40,488 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:10:40,514 - kpg_malibu_bvb - INFO - Updating message 1282 in chat -1001931349972
+2025-01-31 13:10:41,021 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:10:41,022 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:10:44,935 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 13:10:44,941 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 13:10:44,942 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 13:10:44,942 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:10:44,943 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 13:10:44,943 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 13:10:44,943 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 13:10:44,945 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:10:44,947 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 13:10:44,947 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 13:10:44,948 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 13:10:44,948 - kpg_malibu_bvb - INFO - Found player with id 1
+2025-01-31 13:10:44,951 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 13:10:44,957 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 13:10:45,454 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1282, chat_id: -1001931349972
+2025-01-31 13:10:45,505 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:10:45,565 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 13:10:45,569 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:10:45,569 - kpg_malibu_bvb - INFO - Updating message 1282 in chat -1001931349972
+2025-01-31 13:10:45,996 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:10:45,996 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:10:49,238 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 13:11:14,734 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 13:11:16,685 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 13:11:25,293 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 520, in handle_message
+    context_copy = context.copy()
+                   ^^^^^^^^^^^^
+AttributeError: 'CallbackContext' object has no attribute 'copy'
+2025-01-31 13:37:12,404 - kpg_malibu_bvb - ERROR - Error starting bot: 'UserCommandHandler' object has no attribute 'handle_message'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 94, in run
+    self.user_handler.handle_message
+AttributeError: 'UserCommandHandler' object has no attribute 'handle_message'
+2025-01-31 13:37:57,312 - kpg_malibu_bvb - ERROR - Error starting bot: 'UserCommandHandler' object has no attribute 'handle_message'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 94, in run
+    self.user_handler.handle_message
+AttributeError: 'UserCommandHandler' object has no attribute 'handle_message'
+2025-01-31 13:40:17,869 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 13:40:28,554 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 13:42:35,165 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 13:42:35,167 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 13:42:35,697 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1287, chat_id=-1001931349972
+2025-01-31 13:42:35,698 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:42:38,604 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 13:42:38,605 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 13:42:38,658 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:42:38,658 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 13:42:38,664 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 13:42:38,666 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 6
+2025-01-31 13:42:38,668 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 13:42:39,140 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 13:42:39,145 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1287, chat_id: -1001931349972
+2025-01-31 13:42:39,173 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:42:39,218 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-31 13:42:39,222 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:42:39,242 - kpg_malibu_bvb - INFO - Updating message 1287 in chat -1001931349972
+2025-01-31 13:42:39,718 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:42:39,718 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:43:43,634 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 13:43:43,637 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 13:43:43,637 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 13:43:43,637 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:43:43,638 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 13:43:43,638 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 13:43:43,638 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 13:43:43,640 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:43:43,641 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 13:43:43,641 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 13:43:43,642 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 13:43:43,644 - kpg_malibu_bvb - INFO - Found player with id 1
+2025-01-31 13:43:43,645 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 13:43:43,646 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 13:43:44,086 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1287, chat_id: -1001931349972
+2025-01-31 13:43:44,089 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:43:44,091 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 13:43:44,105 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:43:44,107 - kpg_malibu_bvb - INFO - Updating message 1287 in chat -1001931349972
+2025-01-31 13:43:44,534 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:43:44,534 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:43:48,936 - kpg_malibu_bvb - INFO - Button pressed: join_self_2
+2025-01-31 13:43:48,936 - kpg_malibu_bvb - INFO - Joining session 2 for user 43704386
+2025-01-31 13:43:48,938 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 13:43:48,939 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 13:43:48,940 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 13:43:48,942 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 8
+2025-01-31 13:43:48,946 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 13:43:49,451 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 13:43:49,480 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1287, chat_id: -1001931349972
+2025-01-31 13:43:49,484 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:43:49,493 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 13:43:49,540 - kpg_malibu_bvb - INFO - Session 2: 1 players, 0 in reserve
+2025-01-31 13:43:49,541 - kpg_malibu_bvb - INFO - Updating message 1287 in chat -1001931349972
+2025-01-31 13:43:49,966 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:43:49,967 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:43:51,647 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 13:43:51,649 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 13:43:51,650 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 13:43:51,650 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:43:51,650 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 13:43:51,651 - kpg_malibu_bvb - INFO - No registration found in session 1
+2025-01-31 13:43:51,651 - kpg_malibu_bvb - INFO - Checking registration for session 2
+2025-01-31 13:43:51,651 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 13:43:51,652 - kpg_malibu_bvb - INFO - Found registration id=2, status=main for player 1 (Alexey)
+2025-01-31 13:43:51,652 - kpg_malibu_bvb - INFO - Found registration in session 2
+2025-01-31 13:43:51,652 - kpg_malibu_bvb - INFO - Attempting to leave session 2 for user 43704386
+2025-01-31 13:43:51,657 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 13:43:51,658 - kpg_malibu_bvb - INFO - Found registration id=2, status=main for player 1 (Alexey)
+2025-01-31 13:43:51,658 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 2: True
+2025-01-31 13:43:51,659 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 2
+2025-01-31 13:43:51,659 - kpg_malibu_bvb - INFO - Found player with id 1
+2025-01-31 13:43:51,660 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 13:43:51,668 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 2
+2025-01-31 13:43:52,171 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1287, chat_id: -1001931349972
+2025-01-31 13:43:52,173 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:43:52,175 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 13:43:52,189 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:43:52,189 - kpg_malibu_bvb - INFO - Updating message 1287 in chat -1001931349972
+2025-01-31 13:43:52,629 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:43:52,629 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:43:56,211 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 13:44:04,373 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 13:44:06,803 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 13:44:13,208 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable
+2025-01-31 13:46:49,042 - kpg_malibu_bvb - ERROR - Error starting bot: 'UserCommandHandler' object has no attribute 'handle_message'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/main.py", line 96, in run
+    self.user_handler.handle_message
+AttributeError: 'UserCommandHandler' object has no attribute 'handle_message'
+2025-01-31 13:49:48,317 - kpg_malibu_bvb - ERROR - Error starting bot: 'UserCommandHandler' object has no attribute 'handle_message'
+2025-01-31 13:49:54,127 - kpg_malibu_bvb - ERROR - Error starting bot: 'UserCommandHandler' object has no attribute 'handle_message'
+2025-01-31 13:55:53,286 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 13:56:09,918 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 13:56:23,817 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 13:56:23,819 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 13:56:24,339 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1294, chat_id=-1001931349972
+2025-01-31 13:56:24,340 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:56:26,532 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 13:56:26,533 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 13:56:26,546 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:56:26,547 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 13:56:26,549 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 13:56:26,550 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 6
+2025-01-31 13:56:26,553 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 13:56:26,983 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 13:56:26,989 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1294, chat_id: -1001931349972
+2025-01-31 13:56:27,023 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:56:27,042 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-31 13:56:27,099 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:56:27,100 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 13:56:27,549 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:56:27,549 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:56:29,811 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 13:56:29,814 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 13:56:29,814 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 13:56:29,815 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:56:29,816 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 13:56:29,816 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 13:56:29,816 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 13:56:29,819 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 13:56:29,822 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 13:56:29,825 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 13:56:29,826 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 13:56:29,827 - kpg_malibu_bvb - INFO - Found player with id 1
+2025-01-31 13:56:29,832 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 13:56:29,834 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 13:56:30,317 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1294, chat_id: -1001931349972
+2025-01-31 13:56:30,318 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:56:30,341 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 13:56:30,361 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:56:30,393 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 13:56:30,833 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:56:30,834 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 13:56:32,977 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 13:56:38,195 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 13:56:45,268 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 13:56:55,734 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 13:56:55,785 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1294, chat_id: -1001931349972
+2025-01-31 13:56:55,790 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:56:55,876 - kpg_malibu_bvb - INFO - Session 1: 3 players, 0 in reserve
+2025-01-31 13:56:55,890 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 13:56:55,898 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 13:56:56,350 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:56:56,350 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 13:57:04,165 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 13:57:27,242 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 13:57:31,594 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_2
+2025-01-31 13:58:19,753 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 13:58:21,339 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_2
+2025-01-31 13:58:32,406 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 13:58:32,503 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1294, chat_id: -1001931349972
+2025-01-31 13:58:32,510 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 13:58:32,585 - kpg_malibu_bvb - INFO - Session 1: 3 players, 0 in reserve
+2025-01-31 13:58:32,589 - kpg_malibu_bvb - INFO - Session 2: 3 players, 0 in reserve
+2025-01-31 13:58:32,589 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 13:58:33,097 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 13:58:33,097 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 13:58:41,577 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 13:58:44,717 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 13:58:47,310 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_4
+2025-01-31 13:58:47,311 - kpg_malibu_bvb - INFO - Removing player 4 from session 1
+2025-01-31 13:58:47,632 - kpg_malibu_bvb - INFO - Getting registration info for player 4 in session 1
+2025-01-31 13:58:47,633 - kpg_malibu_bvb - INFO - Found registration: (4, 1, 4, 'main', '2025-01-31T13:56:54.841280', 43704386, 'Alexey', None, None)
+2025-01-31 13:58:47,633 - kpg_malibu_bvb - INFO - Created registration object: Registration(id=4, session_id=1, player_id=4, status=<PlayerStatus.MAIN: 'main'>, registration_time=datetime.datetime(2025, 1, 31, 13, 56, 54, 841280), registered_by_id=43704386, registered_by_name=None)
+2025-01-31 13:58:47,633 - kpg_malibu_bvb - INFO - Player registered by: 43704386, current user: 43704386
+2025-01-31 13:58:47,634 - kpg_malibu_bvb - INFO - Removing player 4 from session 1
+2025-01-31 13:58:47,636 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 13:58:47,636 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 13:58:48,047 - kpg_malibu_bvb - ERROR - Error removing player: 'CallbackContext' object has no attribute 'copy'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 313, in button_handler
+    context_copy = context.copy()
+                   ^^^^^^^^^^^^
+AttributeError: 'CallbackContext' object has no attribute 'copy'
+2025-01-31 13:58:50,098 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 13:58:50,099 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 13:58:54,995 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 13:58:54,995 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 13:59:02,808 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_3
+2025-01-31 13:59:02,808 - kpg_malibu_bvb - INFO - Removing player 3 from session 1
+2025-01-31 13:59:03,094 - kpg_malibu_bvb - INFO - Getting registration info for player 3 in session 1
+2025-01-31 13:59:03,095 - kpg_malibu_bvb - INFO - Found registration: (3, 1, 3, 'main', '2025-01-31T13:56:54.833361', 43704386, 'Alexey', None, None)
+2025-01-31 13:59:03,095 - kpg_malibu_bvb - INFO - Created registration object: Registration(id=3, session_id=1, player_id=3, status=<PlayerStatus.MAIN: 'main'>, registration_time=datetime.datetime(2025, 1, 31, 13, 56, 54, 833361), registered_by_id=43704386, registered_by_name=None)
+2025-01-31 13:59:03,095 - kpg_malibu_bvb - INFO - Player registered by: 43704386, current user: 43704386
+2025-01-31 13:59:03,096 - kpg_malibu_bvb - INFO - Removing player 3 from session 1
+2025-01-31 13:59:03,098 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 13:59:03,098 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 13:59:03,528 - kpg_malibu_bvb - ERROR - Error removing player: 'CallbackContext' object has no attribute 'copy'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 313, in button_handler
+    context_copy = context.copy()
+                   ^^^^^^^^^^^^
+AttributeError: 'CallbackContext' object has no attribute 'copy'
+2025-01-31 13:59:05,587 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 13:59:05,587 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:01:19,303 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 14:01:22,292 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 14:01:42,504 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 14:01:42,505 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:01:46,770 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 14:01:46,773 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:01:49,183 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 14:01:49,183 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:02:11,813 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 14:02:11,814 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:02:19,069 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 14:02:20,735 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 14:02:48,106 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 14:02:48,108 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:03:04,143 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 14:03:04,144 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 14:03:04,147 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 14:03:04,148 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 14:03:04,150 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 14:03:04,151 - kpg_malibu_bvb - INFO - Current players in session: 1, max: 6
+2025-01-31 14:03:04,165 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 14:03:04,636 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 14:03:04,638 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1294, chat_id: -1001931349972
+2025-01-31 14:03:04,639 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:03:04,641 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-31 14:03:04,656 - kpg_malibu_bvb - INFO - Session 2: 3 players, 0 in reserve
+2025-01-31 14:03:04,657 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 14:03:05,110 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 14:03:05,110 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 14:04:25,539 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 14:04:32,510 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 14:04:34,865 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 14:04:39,460 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_6
+2025-01-31 14:04:39,461 - kpg_malibu_bvb - INFO - Removing player 6 from session 2
+2025-01-31 14:04:39,781 - kpg_malibu_bvb - INFO - Getting registration info for player 6 in session 2
+2025-01-31 14:04:39,781 - kpg_malibu_bvb - INFO - Found registration: (6, 2, 6, 'main', '2025-01-31T13:58:31.502647', 43704386, 'Alexey', None, None)
+2025-01-31 14:04:39,782 - kpg_malibu_bvb - INFO - Created registration object: Registration(id=6, session_id=2, player_id=6, status=<PlayerStatus.MAIN: 'main'>, registration_time=datetime.datetime(2025, 1, 31, 13, 58, 31, 502647), registered_by_id=43704386, registered_by_name=None)
+2025-01-31 14:04:39,782 - kpg_malibu_bvb - INFO - Player registered by: 43704386, current user: 43704386
+2025-01-31 14:04:39,782 - kpg_malibu_bvb - INFO - Removing player 6 from session 2
+2025-01-31 14:04:39,784 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 14:04:39,784 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 14:04:40,277 - kpg_malibu_bvb - ERROR - Error removing player: 'CallbackContext' object has no attribute 'copy'
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 313, in button_handler
+    context_copy = context.copy()
+                   ^^^^^^^^^^^^
+AttributeError: 'CallbackContext' object has no attribute 'copy'
+2025-01-31 14:04:43,360 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 14:04:43,362 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 240, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 14:04:54,456 - kpg_malibu_bvb - INFO - Button pressed: join_self_2
+2025-01-31 14:04:54,457 - kpg_malibu_bvb - INFO - Joining session 2 for user 43704386
+2025-01-31 14:04:54,460 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 14:04:54,460 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 14:04:54,461 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 14:04:54,463 - kpg_malibu_bvb - INFO - Current players in session: 2, max: 8
+2025-01-31 14:04:54,468 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 14:04:54,994 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 14:04:55,002 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1294, chat_id: -1001931349972
+2025-01-31 14:04:55,006 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:04:55,010 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-31 14:04:55,041 - kpg_malibu_bvb - INFO - Session 2: 3 players, 0 in reserve
+2025-01-31 14:04:55,041 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 14:04:55,503 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 14:04:55,504 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 14:05:35,689 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 14:05:42,451 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 14:05:50,738 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 14:05:53,635 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_2
+2025-01-31 14:06:08,566 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 14:06:08,588 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1294, chat_id: -1001931349972
+2025-01-31 14:06:08,601 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:06:08,661 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-31 14:06:08,667 - kpg_malibu_bvb - INFO - Session 2: 8 players, 6 in reserve
+2025-01-31 14:06:08,682 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 14:06:09,125 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 14:06:09,125 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 14:06:36,004 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 14:06:36,004 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 14:06:36,008 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 14:06:36,008 - kpg_malibu_bvb - INFO - Found registration id=8, status=main for player 1 (Alexey)
+2025-01-31 14:06:36,008 - kpg_malibu_bvb - INFO - User 43704386 already registered for session 1
+2025-01-31 14:06:46,360 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 14:06:46,362 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 14:06:46,362 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 14:06:46,362 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 14:06:46,363 - kpg_malibu_bvb - INFO - Found registration id=8, status=main for player 1 (Alexey)
+2025-01-31 14:06:46,363 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 14:06:46,363 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 14:06:46,365 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 14:06:46,365 - kpg_malibu_bvb - INFO - Found registration id=8, status=main for player 1 (Alexey)
+2025-01-31 14:06:46,365 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 14:06:46,370 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 14:06:46,370 - kpg_malibu_bvb - INFO - Found player with id 1
+2025-01-31 14:06:46,371 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 14:06:46,375 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 14:06:46,817 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1294, chat_id: -1001931349972
+2025-01-31 14:06:46,819 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:06:46,821 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-31 14:06:46,826 - kpg_malibu_bvb - INFO - Session 2: 8 players, 6 in reserve
+2025-01-31 14:06:46,827 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 14:06:47,476 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 14:06:47,476 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 14:06:52,761 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 14:06:52,762 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 14:06:52,763 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 14:06:52,765 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 14:06:52,768 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 14:06:52,769 - kpg_malibu_bvb - INFO - No registration found in session 1
+2025-01-31 14:06:52,769 - kpg_malibu_bvb - INFO - Checking registration for session 2
+2025-01-31 14:06:52,770 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 14:06:52,771 - kpg_malibu_bvb - INFO - Found registration id=9, status=main for player 1 (Alexey)
+2025-01-31 14:06:52,771 - kpg_malibu_bvb - INFO - Found registration in session 2
+2025-01-31 14:06:52,771 - kpg_malibu_bvb - INFO - Attempting to leave session 2 for user 43704386
+2025-01-31 14:06:52,773 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 14:06:52,775 - kpg_malibu_bvb - INFO - Found registration id=9, status=main for player 1 (Alexey)
+2025-01-31 14:06:52,776 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 2: True
+2025-01-31 14:06:52,777 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 2
+2025-01-31 14:06:52,777 - kpg_malibu_bvb - INFO - Found player with id 1
+2025-01-31 14:06:52,778 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 14:06:52,791 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 2
+2025-01-31 14:06:53,266 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1294, chat_id: -1001931349972
+2025-01-31 14:06:53,267 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:06:53,269 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-31 14:06:53,277 - kpg_malibu_bvb - INFO - Session 2: 8 players, 5 in reserve
+2025-01-31 14:06:53,278 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 14:06:53,734 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 14:06:53,735 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 14:08:13,998 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 14:08:14,000 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 14:08:14,018 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 14:08:14,019 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 14:08:14,020 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 14:08:14,021 - kpg_malibu_bvb - INFO - Current players in session: 1, max: 6
+2025-01-31 14:08:14,025 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 14:08:14,439 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 14:08:14,441 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1294, chat_id: -1001931349972
+2025-01-31 14:08:14,442 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:08:14,444 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-31 14:08:14,455 - kpg_malibu_bvb - INFO - Session 2: 8 players, 5 in reserve
+2025-01-31 14:08:14,455 - kpg_malibu_bvb - INFO - Updating message 1294 in chat -1001931349972
+2025-01-31 14:08:14,943 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 14:08:14,943 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 14:08:52,232 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 14:08:52,238 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:08:56,747 - kpg_malibu_bvb - INFO - Command: help | User: 43704386 | Chat: -1001931349972
+2025-01-31 14:09:12,194 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 14:09:12,196 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 14:10:30,212 - kpg_malibu_bvb - INFO - Command: stats | User: 43704386 | Chat: -1001931349972
+2025-01-31 17:23:14,753 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 17:23:35,663 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 17:23:35,664 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 17:23:36,297 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1316, chat_id=-1001931349972
+2025-01-31 17:23:36,310 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 17:23:40,859 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:23:47,157 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 17:23:49,519 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 17:24:04,451 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 17:24:04,574 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:24:04,577 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:24:04,635 - kpg_malibu_bvb - INFO - Session 1: 3 players, 0 in reserve
+2025-01-31 17:24:04,641 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:24:04,642 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:24:05,090 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:24:05,090 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 17:24:25,273 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:24:30,886 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 17:24:33,320 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 17:24:35,909 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_2
+2025-01-31 17:24:35,910 - kpg_malibu_bvb - INFO - Removing player 2 from session 1
+2025-01-31 17:24:35,924 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 17:24:35,925 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 17:24:36,645 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:24:36,725 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:24:36,760 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-31 17:24:36,771 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:24:36,777 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:24:37,239 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:24:48,828 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 17:24:48,829 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 17:24:48,850 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 17:24:48,868 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:24:48,898 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 17:24:48,900 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:24:48,913 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 17:24:48,914 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:24:48,981 - kpg_malibu_bvb - INFO - Added player 4 to database
+2025-01-31 17:24:49,016 - kpg_malibu_bvb - INFO - Current players in session: 2, max: 6
+2025-01-31 17:24:49,024 - kpg_malibu_bvb - INFO - Registered player 4 with status PlayerStatus.MAIN
+2025-01-31 17:24:49,457 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 17:24:49,477 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:24:49,478 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:24:49,480 - kpg_malibu_bvb - INFO - Session 1: 3 players, 0 in reserve
+2025-01-31 17:24:49,483 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:24:49,483 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:24:49,932 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:24:49,933 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 17:24:52,272 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:25:00,207 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 17:25:09,522 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 17:25:11,880 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 17:25:11,941 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:25:11,943 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:25:11,961 - kpg_malibu_bvb - INFO - Session 1: 6 players, 0 in reserve
+2025-01-31 17:25:11,994 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:25:11,996 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:25:12,474 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:25:12,475 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 17:26:27,127 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 17:26:27,129 - kpg_malibu_bvb - INFO - Joining session 1 for user 5988856792
+2025-01-31 17:26:27,131 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 5988856792
+2025-01-31 17:26:27,131 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:26:27,139 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 5988856792
+2025-01-31 17:26:27,140 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:26:27,140 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 5988856792
+2025-01-31 17:26:27,141 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:26:27,154 - kpg_malibu_bvb - INFO - Added player 8 to database
+2025-01-31 17:26:27,156 - kpg_malibu_bvb - INFO - Current players in session: 6, max: 6
+2025-01-31 17:26:27,164 - kpg_malibu_bvb - INFO - Registered player 8 with status PlayerStatus.RESERVE
+2025-01-31 17:26:27,698 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 17:26:27,700 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:26:27,733 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:26:27,783 - kpg_malibu_bvb - INFO - Session 1: 6 players, 1 in reserve
+2025-01-31 17:26:27,799 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:26:27,799 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:26:28,467 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:26:28,470 - kpg_malibu_bvb - INFO - Command: join | User: 5988856792 | Chat: -1001931349972
+2025-01-31 17:26:37,651 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:26:52,537 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 17:26:55,041 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 17:26:58,048 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 17:26:58,048 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:27:01,158 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 17:27:01,159 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:27:02,193 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 17:27:02,194 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:27:03,067 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 17:27:03,068 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:30:33,684 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:30:39,020 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 17:30:45,785 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 17:30:45,786 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:30:47,631 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:30:54,786 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 17:30:57,151 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 17:30:57,151 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:31:15,722 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 17:31:20,183 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 17:31:20,184 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 248, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'menu'
+2025-01-31 17:31:55,941 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 17:34:08,639 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 17:34:20,516 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 17:34:20,537 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:34:20,568 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:34:20,584 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-31 17:34:20,601 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:34:20,604 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:34:21,338 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:34:21,339 - kpg_malibu_bvb - INFO - Command: add_group | User: 5988856792 | Chat: 5988856792
+2025-01-31 17:35:04,034 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 17:35:06,091 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 17:51:21,479 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 17:51:34,780 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 17:51:34,785 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 17:51:34,785 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 17:51:34,788 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 17:51:34,790 - kpg_malibu_bvb - INFO - Found registration id=4, status=main for player 4 (Alexey)
+2025-01-31 17:51:34,797 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 17:51:34,798 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 17:51:34,800 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 17:51:34,801 - kpg_malibu_bvb - INFO - Found registration id=4, status=main for player 4 (Alexey)
+2025-01-31 17:51:34,801 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 17:51:34,801 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 17:51:34,802 - kpg_malibu_bvb - INFO - Found player with id 4
+2025-01-31 17:51:34,805 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 17:51:34,806 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 17:51:35,866 - kpg_malibu_bvb - INFO - Notified player 5988856792 about moving to main list
+2025-01-31 17:51:35,868 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:51:35,869 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:51:35,872 - kpg_malibu_bvb - INFO - Session 1: 6 players, 3 in reserve
+2025-01-31 17:51:35,875 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:51:35,889 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:51:36,382 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:51:36,384 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 17:51:38,430 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 17:51:38,430 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 17:51:38,434 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 17:51:38,435 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:51:38,437 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 17:51:38,439 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:51:38,440 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 17:51:38,441 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 17:51:38,442 - kpg_malibu_bvb - INFO - Added player 4 to database
+2025-01-31 17:51:38,450 - kpg_malibu_bvb - INFO - Current players in session: 6, max: 6
+2025-01-31 17:51:38,453 - kpg_malibu_bvb - INFO - Registered player 4 with status PlayerStatus.RESERVE
+2025-01-31 17:51:38,898 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 17:51:38,900 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 17:51:38,901 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 17:51:38,903 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-31 17:51:38,923 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 17:51:38,924 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 17:51:39,402 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 17:51:39,403 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 17:51:41,969 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 17:51:51,205 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 17:51:55,364 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 17:52:02,717 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_3
+2025-01-31 17:52:02,718 - kpg_malibu_bvb - INFO - Removing player 3 from session 1
+2025-01-31 17:52:02,721 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 17:52:02,722 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 17:52:03,003 - kpg_malibu_bvb - ERROR - Error removing player: create_session_players_menu() missing 1 required positional argument: 'reserve'
+2025-01-31 17:52:05,167 - kpg_malibu_bvb - INFO - Button pressed: header_reserve
+2025-01-31 17:52:05,168 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 279, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'reserve'
+2025-01-31 18:07:17,496 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 18:07:17,500 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 18:07:17,500 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 18:07:17,502 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 18:07:17,503 - kpg_malibu_bvb - INFO - Found registration id=12, status=reserve for player 4 (Alexey)
+2025-01-31 18:07:17,503 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 18:07:17,504 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 18:07:17,506 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 18:07:17,509 - kpg_malibu_bvb - INFO - Found registration id=12, status=reserve for player 4 (Alexey)
+2025-01-31 18:07:17,510 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 18:07:17,511 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 18:07:17,521 - kpg_malibu_bvb - INFO - Found player with id 4
+2025-01-31 18:07:17,522 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 18:07:17,524 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 18:07:17,943 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1316, chat_id: -1001931349972
+2025-01-31 18:07:17,946 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:07:17,977 - kpg_malibu_bvb - INFO - Session 1: 6 players, 2 in reserve
+2025-01-31 18:07:17,991 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:07:17,991 - kpg_malibu_bvb - INFO - Updating message 1316 in chat -1001931349972
+2025-01-31 18:07:18,447 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:07:18,447 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 18:07:48,922 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 18:07:57,094 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 18:07:57,097 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 18:07:57,842 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1330, chat_id=-1001931349972
+2025-01-31 18:07:57,842 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 18:08:45,076 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 18:08:51,619 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 18:08:53,884 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 18:08:56,889 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 18:08:57,035 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1330, chat_id: -1001931349972
+2025-01-31 18:08:57,037 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:08:57,043 - kpg_malibu_bvb - INFO - Session 1: 6 players, 8 in reserve
+2025-01-31 18:08:57,049 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:08:57,050 - kpg_malibu_bvb - INFO - Updating message 1330 in chat -1001931349972
+2025-01-31 18:08:57,577 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:08:57,577 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 18:09:14,850 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:09:51,017 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:10:00,128 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_3
+2025-01-31 18:10:00,250 - kpg_malibu_bvb - INFO - Removing player 3 from session 1
+2025-01-31 18:10:00,322 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:10:00,323 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:10:00,645 - kpg_malibu_bvb - ERROR - Error removing player: create_session_players_menu() missing 1 required positional argument: 'reserve'
+2025-01-31 18:11:59,890 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 18:11:59,892 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 18:11:59,894 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 18:11:59,895 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 18:11:59,899 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 18:11:59,900 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 18:11:59,902 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 18:11:59,903 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 18:11:59,936 - kpg_malibu_bvb - INFO - Added player 15 to database
+2025-01-31 18:11:59,978 - kpg_malibu_bvb - INFO - Current players in session: 5, max: 6
+2025-01-31 18:11:59,987 - kpg_malibu_bvb - INFO - Registered player 15 with status PlayerStatus.MAIN
+2025-01-31 18:12:00,467 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 18:12:00,470 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1330, chat_id: -1001931349972
+2025-01-31 18:12:00,472 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:12:00,509 - kpg_malibu_bvb - INFO - Session 1: 6 players, 8 in reserve
+2025-01-31 18:12:00,556 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:12:00,556 - kpg_malibu_bvb - INFO - Updating message 1330 in chat -1001931349972
+2025-01-31 18:12:01,086 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:12:01,086 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 18:12:10,346 - kpg_malibu_bvb - INFO - Button pressed: cancel_my_signup
+2025-01-31 18:12:10,347 - kpg_malibu_bvb - INFO - User 43704386 trying to cancel registration
+2025-01-31 18:12:10,347 - kpg_malibu_bvb - INFO - Checking registration for session 1
+2025-01-31 18:12:10,348 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 18:12:10,348 - kpg_malibu_bvb - INFO - Found registration id=15, status=main for player 15 (Alexey)
+2025-01-31 18:12:10,349 - kpg_malibu_bvb - INFO - Found registration in session 1
+2025-01-31 18:12:10,350 - kpg_malibu_bvb - INFO - Attempting to leave session 1 for user 43704386
+2025-01-31 18:12:10,352 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 18:12:10,369 - kpg_malibu_bvb - INFO - Found registration id=15, status=main for player 15 (Alexey)
+2025-01-31 18:12:10,369 - kpg_malibu_bvb - INFO - Registration check for user 43704386 in session 1: True
+2025-01-31 18:12:10,370 - kpg_malibu_bvb - INFO - Unregistering player with telegram_id 43704386 from session 1
+2025-01-31 18:12:10,370 - kpg_malibu_bvb - INFO - Found player with id 15
+2025-01-31 18:12:10,371 - kpg_malibu_bvb - INFO - Deleted 1 registration(s)
+2025-01-31 18:12:10,373 - kpg_malibu_bvb - INFO - Successfully unregistered user 43704386 from session 1
+2025-01-31 18:12:10,847 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1330, chat_id: -1001931349972
+2025-01-31 18:12:10,880 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:12:10,897 - kpg_malibu_bvb - INFO - Session 1: 6 players, 7 in reserve
+2025-01-31 18:12:10,939 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:12:10,939 - kpg_malibu_bvb - INFO - Updating message 1330 in chat -1001931349972
+2025-01-31 18:12:11,413 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:12:11,413 - kpg_malibu_bvb - INFO - Command: leave | User: 43704386 | Chat: -1001931349972
+2025-01-31 18:28:44,606 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 18:28:57,991 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:29:07,304 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 18:29:12,023 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:29:14,814 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:29:18,490 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_5
+2025-01-31 18:29:18,491 - kpg_malibu_bvb - INFO - Removing player 5 from session 1
+2025-01-31 18:29:18,493 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:29:18,493 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:29:19,175 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1330, chat_id: -1001931349972
+2025-01-31 18:29:19,177 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:29:19,190 - kpg_malibu_bvb - INFO - Session 1: 5 players, 7 in reserve
+2025-01-31 18:29:19,202 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:29:19,203 - kpg_malibu_bvb - INFO - Updating message 1330 in chat -1001931349972
+2025-01-31 18:29:19,640 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:29:23,701 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_11
+2025-01-31 18:29:23,702 - kpg_malibu_bvb - INFO - Removing player 11 from session 1
+2025-01-31 18:29:23,704 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:29:23,704 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:29:24,409 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1330, chat_id: -1001931349972
+2025-01-31 18:29:24,464 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:29:24,493 - kpg_malibu_bvb - INFO - Session 1: 6 players, 5 in reserve
+2025-01-31 18:29:24,544 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:29:24,545 - kpg_malibu_bvb - INFO - Updating message 1330 in chat -1001931349972
+2025-01-31 18:29:25,010 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:29:26,676 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 18:29:30,045 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:30:55,895 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 18:31:04,983 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:31:16,950 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:31:26,195 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 18:31:33,586 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:31:35,921 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:31:39,533 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:31:41,852 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 18:31:44,205 - kpg_malibu_bvb - INFO - Button pressed: select_session_2
+2025-01-31 18:31:48,264 - kpg_malibu_bvb - INFO - Button pressed: select_session_2
+2025-01-31 18:31:48,933 - kpg_malibu_bvb - INFO - Button pressed: select_session_2
+2025-01-31 18:31:50,044 - kpg_malibu_bvb - INFO - Button pressed: select_session_1
+2025-01-31 18:31:51,221 - kpg_malibu_bvb - INFO - Button pressed: select_session_1
+2025-01-31 18:31:55,078 - kpg_malibu_bvb - INFO - Button pressed: select_session_1
+2025-01-31 18:31:56,297 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:31:59,142 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:32:01,383 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:32:03,744 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 18:33:15,689 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 18:33:21,227 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 18:33:21,228 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 18:33:21,674 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1337, chat_id=-1001931349972
+2025-01-31 18:33:21,675 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 18:33:27,771 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 18:33:46,857 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 18:33:48,791 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 18:33:52,512 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 18:33:52,734 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:33:52,738 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:33:52,748 - kpg_malibu_bvb - INFO - Session 1: 6 players, 8 in reserve
+2025-01-31 18:33:52,783 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:33:52,788 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:33:53,310 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:33:53,310 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 18:33:55,553 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:33:57,426 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:33:59,234 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:34:01,523 - kpg_malibu_bvb - INFO - Button pressed: back_to_remove_menu
+2025-01-31 18:34:49,159 - kpg_malibu_bvb - INFO - Button pressed: select_session_1
+2025-01-31 18:34:51,527 - kpg_malibu_bvb - INFO - Button pressed: select_session_2
+2025-01-31 18:34:52,905 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:48:58,854 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 18:49:07,488 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 18:49:12,407 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:49:15,579 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:49:18,027 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:49:20,032 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:49:21,732 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:49:23,474 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 18:49:25,646 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:49:30,717 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:50:45,149 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_3
+2025-01-31 18:50:45,151 - kpg_malibu_bvb - INFO - Removing player 3 from session 1
+2025-01-31 18:50:45,154 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:50:45,154 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:50:45,956 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:50:46,218 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:50:46,238 - kpg_malibu_bvb - INFO - Session 1: 5 players, 8 in reserve
+2025-01-31 18:50:46,288 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:50:46,288 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:50:46,786 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:51:34,810 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_1
+2025-01-31 18:51:34,856 - kpg_malibu_bvb - INFO - Removing player 1 from session 1
+2025-01-31 18:51:34,859 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:51:34,860 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:51:35,743 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:51:35,746 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:51:35,759 - kpg_malibu_bvb - INFO - Session 1: 5 players, 7 in reserve
+2025-01-31 18:51:35,761 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:51:35,762 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:51:36,289 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:51:45,955 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_2
+2025-01-31 18:51:45,956 - kpg_malibu_bvb - INFO - Removing player 2 from session 1
+2025-01-31 18:51:45,959 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:51:45,959 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:51:46,775 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:51:46,839 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:51:46,848 - kpg_malibu_bvb - INFO - Session 1: 5 players, 6 in reserve
+2025-01-31 18:51:46,898 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:51:46,916 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:51:47,373 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:51:52,114 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_6
+2025-01-31 18:51:52,116 - kpg_malibu_bvb - INFO - Removing player 6 from session 1
+2025-01-31 18:51:52,118 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:51:52,119 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:51:52,866 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:51:52,870 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:51:52,928 - kpg_malibu_bvb - INFO - Session 1: 5 players, 5 in reserve
+2025-01-31 18:51:52,962 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:51:52,963 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:51:53,399 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:51:59,768 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_4
+2025-01-31 18:51:59,771 - kpg_malibu_bvb - INFO - Removing player 4 from session 1
+2025-01-31 18:51:59,789 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:51:59,796 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:00,556 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:00,628 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:00,637 - kpg_malibu_bvb - INFO - Session 1: 5 players, 4 in reserve
+2025-01-31 18:52:00,655 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:00,655 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:01,071 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:02,560 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_5
+2025-01-31 18:52:02,570 - kpg_malibu_bvb - INFO - Removing player 5 from session 1
+2025-01-31 18:52:02,602 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:02,602 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:03,290 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:03,306 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:03,340 - kpg_malibu_bvb - INFO - Session 1: 5 players, 3 in reserve
+2025-01-31 18:52:03,372 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:03,372 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:03,822 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:04,488 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:52:24,377 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:52:28,260 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:52:31,128 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_7
+2025-01-31 18:52:31,129 - kpg_malibu_bvb - INFO - Removing player 7 from session 1
+2025-01-31 18:52:31,132 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:31,133 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:31,821 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:31,864 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:31,903 - kpg_malibu_bvb - INFO - Session 1: 5 players, 2 in reserve
+2025-01-31 18:52:31,909 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:31,920 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:32,410 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:33,217 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_8
+2025-01-31 18:52:33,236 - kpg_malibu_bvb - INFO - Removing player 8 from session 1
+2025-01-31 18:52:33,300 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:33,300 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:33,968 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:34,019 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:34,029 - kpg_malibu_bvb - INFO - Session 1: 5 players, 1 in reserve
+2025-01-31 18:52:34,037 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:34,037 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:34,508 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:34,922 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_8
+2025-01-31 18:52:34,924 - kpg_malibu_bvb - INFO - Removing player 8 from session 1
+2025-01-31 18:52:34,925 - kpg_malibu_bvb - INFO - Removed failed
+2025-01-31 18:52:35,585 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_9
+2025-01-31 18:52:35,587 - kpg_malibu_bvb - INFO - Removing player 9 from session 1
+2025-01-31 18:52:35,604 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:35,604 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:36,519 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:36,605 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:36,709 - kpg_malibu_bvb - INFO - Session 1: 5 players, 0 in reserve
+2025-01-31 18:52:36,712 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:36,713 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:37,208 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:38,303 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_10
+2025-01-31 18:52:38,304 - kpg_malibu_bvb - INFO - Removing player 10 from session 1
+2025-01-31 18:52:38,308 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:38,308 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:39,112 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:39,135 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:39,240 - kpg_malibu_bvb - INFO - Session 1: 4 players, 0 in reserve
+2025-01-31 18:52:39,274 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:39,276 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:39,730 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:42,198 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_11
+2025-01-31 18:52:42,199 - kpg_malibu_bvb - INFO - Removing player 11 from session 1
+2025-01-31 18:52:42,203 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:42,203 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:43,008 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:43,010 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:43,018 - kpg_malibu_bvb - INFO - Session 1: 3 players, 0 in reserve
+2025-01-31 18:52:43,024 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:43,026 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:43,456 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:44,041 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_12
+2025-01-31 18:52:44,133 - kpg_malibu_bvb - INFO - Removing player 12 from session 1
+2025-01-31 18:52:44,140 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:44,140 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:44,925 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:44,993 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:45,009 - kpg_malibu_bvb - INFO - Session 1: 2 players, 0 in reserve
+2025-01-31 18:52:45,039 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:45,040 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:45,575 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:46,076 - kpg_malibu_bvb - INFO - Button pressed: header_main
+2025-01-31 18:52:46,076 - kpg_malibu_bvb - ERROR - Exception while handling an update:
+Traceback (most recent call last):
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_application.py", line 1264, in process_update
+    await coroutine
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/venv/lib/python3.11/site-packages/telegram/ext/_handlers/basehandler.py", line 157, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alexey/Documents/Python/Актуальное/KPG_Malibu_BVB_bot/handlers/user_handlers.py", line 286, in button_handler
+    session_id = int(data_parts[-1])
+                 ^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'main'
+2025-01-31 18:52:46,556 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_13
+2025-01-31 18:52:46,556 - kpg_malibu_bvb - INFO - Removing player 13 from session 1
+2025-01-31 18:52:46,559 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:46,560 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:47,392 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:47,442 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:47,450 - kpg_malibu_bvb - INFO - Session 1: 1 players, 0 in reserve
+2025-01-31 18:52:47,453 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:47,454 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:47,937 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:48,557 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_14
+2025-01-31 18:52:48,559 - kpg_malibu_bvb - INFO - Removing player 14 from session 1
+2025-01-31 18:52:48,562 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:52:48,573 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:52:49,440 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:52:49,447 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:52:49,489 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 18:52:49,617 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:52:49,618 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:52:50,066 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:52:50,557 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:52:52,585 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:52:56,244 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 18:53:04,714 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 18:53:06,740 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_1
+2025-01-31 18:53:10,010 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 18:53:10,135 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:53:10,143 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:53:10,252 - kpg_malibu_bvb - INFO - Session 1: 6 players, 8 in reserve
+2025-01-31 18:53:10,283 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:53:10,286 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:53:10,777 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:53:10,777 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 18:53:14,385 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:53:16,222 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:53:30,841 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:53:32,665 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:53:34,759 - kpg_malibu_bvb - INFO - Button pressed: private_manage_1
+2025-01-31 18:53:41,699 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_15
+2025-01-31 18:53:41,700 - kpg_malibu_bvb - INFO - Removing player 15 from session 1
+2025-01-31 18:53:41,704 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:53:41,709 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:53:42,547 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:53:42,549 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:53:42,556 - kpg_malibu_bvb - INFO - Session 1: 5 players, 8 in reserve
+2025-01-31 18:53:42,560 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:53:42,561 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:53:43,017 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:53:56,040 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_21
+2025-01-31 18:53:56,041 - kpg_malibu_bvb - INFO - Removing player 21 from session 1
+2025-01-31 18:53:56,044 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:53:56,048 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:53:56,769 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:53:56,788 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:53:56,821 - kpg_malibu_bvb - INFO - Session 1: 5 players, 7 in reserve
+2025-01-31 18:53:56,835 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:53:56,836 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:53:57,299 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:54:00,925 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_20
+2025-01-31 18:54:00,927 - kpg_malibu_bvb - INFO - Removing player 20 from session 1
+2025-01-31 18:54:00,930 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:54:00,930 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:54:01,726 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:54:01,741 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:54:01,840 - kpg_malibu_bvb - INFO - Session 1: 5 players, 6 in reserve
+2025-01-31 18:54:01,886 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:54:01,886 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:54:02,502 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:54:16,694 - kpg_malibu_bvb - INFO - Button pressed: remove_player_1_19
+2025-01-31 18:54:16,695 - kpg_malibu_bvb - INFO - Removing player 19 from session 1
+2025-01-31 18:54:16,698 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:54:16,698 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:54:17,478 - kpg_malibu_bvb - INFO - Updating session 1, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:54:17,480 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:54:17,516 - kpg_malibu_bvb - INFO - Session 1: 5 players, 5 in reserve
+2025-01-31 18:54:17,534 - kpg_malibu_bvb - INFO - Session 2: 0 players, 0 in reserve
+2025-01-31 18:54:17,535 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:54:18,004 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:54:51,334 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:54:53,722 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:54:56,115 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 18:54:58,100 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_2
+2025-01-31 18:55:01,752 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 18:55:01,821 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:55:01,835 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:55:01,887 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-31 18:55:01,895 - kpg_malibu_bvb - INFO - Session 2: 8 players, 6 in reserve
+2025-01-31 18:55:01,896 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:55:02,604 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:55:02,605 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 18:55:05,249 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 18:55:19,892 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 18:55:22,628 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 18:55:25,320 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_29
+2025-01-31 18:55:25,321 - kpg_malibu_bvb - INFO - Removing player 29 from session 2
+2025-01-31 18:55:25,323 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:55:25,323 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:55:26,032 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:55:26,033 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:55:26,039 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-31 18:55:26,049 - kpg_malibu_bvb - INFO - Session 2: 7 players, 6 in reserve
+2025-01-31 18:55:26,050 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:55:26,498 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 18:55:30,174 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_33
+2025-01-31 18:55:30,176 - kpg_malibu_bvb - INFO - Removing player 33 from session 2
+2025-01-31 18:55:30,179 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 18:55:30,179 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 18:55:30,946 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1337, chat_id: -1001931349972
+2025-01-31 18:55:31,017 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 18:55:31,019 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-31 18:55:31,032 - kpg_malibu_bvb - INFO - Session 2: 7 players, 5 in reserve
+2025-01-31 18:55:31,032 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 18:55:31,546 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:00:35,493 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 19:00:54,258 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:01:02,283 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 19:01:12,820 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:01:15,182 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 19:01:22,272 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_30
+2025-01-31 19:01:22,273 - kpg_malibu_bvb - INFO - Removing player 30 from session 2
+2025-01-31 19:01:22,276 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 19:01:22,277 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 19:01:22,950 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1337, chat_id: -1001931349972
+2025-01-31 19:01:22,954 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:01:22,979 - kpg_malibu_bvb - INFO - Session 1: 6 players, 4 in reserve
+2025-01-31 19:01:22,989 - kpg_malibu_bvb - INFO - Session 2: 7 players, 4 in reserve
+2025-01-31 19:01:22,990 - kpg_malibu_bvb - INFO - Updating message 1337 in chat -1001931349972
+2025-01-31 19:01:23,504 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:01:33,274 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:01:35,657 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 19:01:49,109 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 19:02:03,418 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 19:02:03,418 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 19:02:04,121 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1343, chat_id=-1001931349972
+2025-01-31 19:02:04,121 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 19:02:11,992 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 19:02:24,996 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 19:02:27,603 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_2
+2025-01-31 19:02:31,858 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 19:02:31,869 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1343, chat_id: -1001931349972
+2025-01-31 19:02:31,884 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:02:31,934 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:02:31,952 - kpg_malibu_bvb - INFO - Session 2: 8 players, 6 in reserve
+2025-01-31 19:02:31,954 - kpg_malibu_bvb - INFO - Updating message 1343 in chat -1001931349972
+2025-01-31 19:02:32,505 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:02:32,506 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 19:02:37,376 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 19:02:44,772 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:02:48,094 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 19:02:51,674 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_3
+2025-01-31 19:02:51,675 - kpg_malibu_bvb - INFO - Removing player 3 from session 2
+2025-01-31 19:02:51,678 - kpg_malibu_bvb - INFO - Removed successfully
+2025-01-31 19:02:51,678 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 19:02:52,376 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1343, chat_id: -1001931349972
+2025-01-31 19:02:52,379 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:02:52,451 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:02:52,484 - kpg_malibu_bvb - INFO - Session 2: 7 players, 6 in reserve
+2025-01-31 19:02:52,493 - kpg_malibu_bvb - INFO - Updating message 1343 in chat -1001931349972
+2025-01-31 19:02:52,948 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:05:43,590 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 19:05:58,163 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_1
+2025-01-31 19:05:58,165 - kpg_malibu_bvb - ERROR - Error removing player: 'Database' object has no attribute 'remove_player_by_id'
+2025-01-31 19:06:30,062 - kpg_malibu_bvb - INFO - Bot started
+2025-01-31 19:06:50,130 - kpg_malibu_bvb - INFO - Checking for sessions on date: 2025-02-01
+2025-01-31 19:06:50,131 - kpg_malibu_bvb - INFO - Found 0 sessions for date 2025-02-01
+2025-01-31 19:06:50,941 - kpg_malibu_bvb - INFO - Updated message info for session 2: message_id=1346, chat_id=-1001931349972
+2025-01-31 19:06:50,942 - kpg_malibu_bvb - INFO - Command: create_session | User: 43704386 | Chat: -1001931349972
+2025-01-31 19:06:53,615 - kpg_malibu_bvb - INFO - Button pressed: join_self_2
+2025-01-31 19:06:53,615 - kpg_malibu_bvb - INFO - Joining session 2 for user 43704386
+2025-01-31 19:06:53,725 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 19:06:53,725 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:06:53,733 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 19:06:53,734 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:06:53,734 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 19:06:53,735 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:06:53,757 - kpg_malibu_bvb - INFO - Added player 1 to database
+2025-01-31 19:06:53,766 - kpg_malibu_bvb - INFO - Current players in session: 0, max: 8
+2025-01-31 19:06:53,816 - kpg_malibu_bvb - INFO - Registered player 1 with status PlayerStatus.MAIN
+2025-01-31 19:06:54,318 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 19:06:54,391 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1346, chat_id: -1001931349972
+2025-01-31 19:06:54,488 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:06:54,546 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:06:54,555 - kpg_malibu_bvb - INFO - Session 2: 1 players, 0 in reserve
+2025-01-31 19:06:54,556 - kpg_malibu_bvb - INFO - Updating message 1346 in chat -1001931349972
+2025-01-31 19:06:55,022 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:06:55,023 - kpg_malibu_bvb - INFO - Command: join | User: 43704386 | Chat: -1001931349972
+2025-01-31 19:06:58,852 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 19:07:32,053 - kpg_malibu_bvb - INFO - Button pressed: register_group
+2025-01-31 19:07:34,284 - kpg_malibu_bvb - INFO - Button pressed: private_group_join_2
+2025-01-31 19:07:38,354 - kpg_malibu_bvb - INFO - Updating message in source chat: -1001931349972
+2025-01-31 19:07:38,405 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1346, chat_id: -1001931349972
+2025-01-31 19:07:38,426 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:07:38,605 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:07:38,610 - kpg_malibu_bvb - INFO - Session 2: 8 players, 7 in reserve
+2025-01-31 19:07:38,612 - kpg_malibu_bvb - INFO - Updating message 1346 in chat -1001931349972
+2025-01-31 19:07:39,062 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:07:39,062 - kpg_malibu_bvb - INFO - Command: add_group | User: 43704386 | Chat: 43704386
+2025-01-31 19:07:53,382 - kpg_malibu_bvb - INFO - Button pressed: back_to_group_menu
+2025-01-31 19:07:55,336 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:07:57,902 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 19:08:02,805 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_4
+2025-01-31 19:08:02,806 - kpg_malibu_bvb - INFO - Removing player 4 from session 2
+2025-01-31 19:08:02,813 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 19:08:03,645 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1346, chat_id: -1001931349972
+2025-01-31 19:08:03,864 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:08:03,891 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:08:03,919 - kpg_malibu_bvb - INFO - Session 2: 8 players, 6 in reserve
+2025-01-31 19:08:03,921 - kpg_malibu_bvb - INFO - Updating message 1346 in chat -1001931349972
+2025-01-31 19:08:04,454 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:08:04,468 - kpg_malibu_bvb - INFO - Main list is full (8/8)
+2025-01-31 19:08:08,771 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_15
+2025-01-31 19:08:08,772 - kpg_malibu_bvb - INFO - Removing player 15 from session 2
+2025-01-31 19:08:08,774 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 19:08:09,509 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1346, chat_id: -1001931349972
+2025-01-31 19:08:09,560 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:08:09,626 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:08:09,676 - kpg_malibu_bvb - INFO - Session 2: 8 players, 5 in reserve
+2025-01-31 19:08:09,676 - kpg_malibu_bvb - INFO - Updating message 1346 in chat -1001931349972
+2025-01-31 19:08:10,181 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:08:10,211 - kpg_malibu_bvb - INFO - Main list is full (8/8)
+2025-01-31 19:08:35,134 - kpg_malibu_bvb - INFO - Button pressed: remove_player_2_3
+2025-01-31 19:08:35,136 - kpg_malibu_bvb - INFO - Removing player 3 from session 2
+2025-01-31 19:08:35,169 - kpg_malibu_bvb - INFO - Player removed successfully
+2025-01-31 19:08:35,897 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1346, chat_id: -1001931349972
+2025-01-31 19:08:35,921 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:08:35,980 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:08:36,001 - kpg_malibu_bvb - INFO - Session 2: 8 players, 4 in reserve
+2025-01-31 19:08:36,002 - kpg_malibu_bvb - INFO - Updating message 1346 in chat -1001931349972
+2025-01-31 19:08:36,444 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:08:36,446 - kpg_malibu_bvb - INFO - Main list is full (8/8)
+2025-01-31 19:09:26,121 - kpg_malibu_bvb - INFO - Button pressed: join_self_2
+2025-01-31 19:09:26,121 - kpg_malibu_bvb - INFO - Joining session 2 for user 43704386
+2025-01-31 19:09:26,250 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 19:09:26,250 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 19:09:26,251 - kpg_malibu_bvb - INFO - User 43704386 already registered for session 2
+2025-01-31 19:09:35,659 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 19:09:35,660 - kpg_malibu_bvb - INFO - Joining session 1 for user 43704386
+2025-01-31 19:09:35,663 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 19:09:35,663 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:09:35,664 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 43704386
+2025-01-31 19:09:35,671 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:09:35,673 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 43704386
+2025-01-31 19:09:35,674 - kpg_malibu_bvb - INFO - Found registration id=1, status=main for player 1 (Alexey)
+2025-01-31 19:10:21,835 - kpg_malibu_bvb - INFO - Button pressed: join_self_2
+2025-01-31 19:10:21,837 - kpg_malibu_bvb - INFO - Joining session 2 for user 5988856792
+2025-01-31 19:10:21,840 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 5988856792
+2025-01-31 19:10:21,842 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:10:21,844 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 5988856792
+2025-01-31 19:10:21,845 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:10:21,845 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 5988856792
+2025-01-31 19:10:21,846 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:10:21,863 - kpg_malibu_bvb - INFO - Added player 16 to database
+2025-01-31 19:10:21,867 - kpg_malibu_bvb - INFO - Current players in session: 8, max: 8
+2025-01-31 19:10:21,882 - kpg_malibu_bvb - INFO - Registered player 16 with status PlayerStatus.RESERVE
+2025-01-31 19:10:22,365 - kpg_malibu_bvb - INFO - Updating session message
+2025-01-31 19:10:22,368 - kpg_malibu_bvb - INFO - Updating session 2, message_id: 1346, chat_id: -1001931349972
+2025-01-31 19:10:22,370 - kpg_malibu_bvb - INFO - Found 2 sessions for date 2025-02-01
+2025-01-31 19:10:22,390 - kpg_malibu_bvb - INFO - Session 1: 0 players, 0 in reserve
+2025-01-31 19:10:22,393 - kpg_malibu_bvb - INFO - Session 2: 8 players, 5 in reserve
+2025-01-31 19:10:22,393 - kpg_malibu_bvb - INFO - Updating message 1346 in chat -1001931349972
+2025-01-31 19:10:22,902 - kpg_malibu_bvb - INFO - Sessions list updated successfully
+2025-01-31 19:10:22,902 - kpg_malibu_bvb - INFO - Command: join | User: 5988856792 | Chat: -1001931349972
+2025-01-31 19:10:24,920 - kpg_malibu_bvb - INFO - Button pressed: join_self_1
+2025-01-31 19:10:24,920 - kpg_malibu_bvb - INFO - Joining session 1 for user 5988856792
+2025-01-31 19:10:24,923 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 5988856792
+2025-01-31 19:10:24,923 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:10:24,930 - kpg_malibu_bvb - INFO - Checking registration for session 1, user 5988856792
+2025-01-31 19:10:24,932 - kpg_malibu_bvb - INFO - No registration found
+2025-01-31 19:10:24,933 - kpg_malibu_bvb - INFO - Checking registration for session 2, user 5988856792
+2025-01-31 19:10:24,940 - kpg_malibu_bvb - INFO - Found registration id=16, status=reserve for player 16 (Alex)
+2025-01-31 19:10:39,900 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:10:42,244 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
+2025-01-31 19:10:49,528 - kpg_malibu_bvb - INFO - Button pressed: group_menu
+2025-01-31 19:10:56,662 - kpg_malibu_bvb - INFO - Button pressed: manage_groups
+2025-01-31 19:10:58,844 - kpg_malibu_bvb - INFO - Button pressed: private_manage_2
